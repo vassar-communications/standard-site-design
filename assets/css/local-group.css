@@ -2711,7 +2711,10 @@ What's tricky is that I don't see rows as modules. Ideally, special content trea
 /*	This is for a row containing tables, typically smaller ones uses as schedules. Not sure how often we'll use it, but it might be used on conference sites like SILA or Tensegrity.
 */
 .row--schedule-grid {
-  padding: 4em; }
+  padding: 2em; }
+  .row--schedule-grid .modulesArea__row {
+    padding-top: 2em;
+    padding-bottom: 3em; }
   .row--schedule-grid .Module--mainContent {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2719,7 +2722,10 @@ What's tricky is that I don't see rows as modules. Ideally, special content trea
     display: flex;
     -webkit-flex-flow: wrap;
         -ms-flex-flow: wrap;
-            flex-flow: wrap; }
+            flex-flow: wrap;
+    max-width: 74em;
+    margin: 0 auto;
+    padding: 0; }
     .row--schedule-grid .Module--mainContent > * {
       width: 100%; }
   @media screen and (min-width: 62.5em) {
@@ -3514,3 +3520,6 @@ tbody td, tbody th {
 
 .u-folderExploring-tensegrity .u-lHeader {
   background-image: url(/exploring-tensegrity/assets/images/InFreeRideHome2-copy.jpg); }
+
+.u-folderExploring-tensegrity .u-NavSite__main {
+  display: none; }

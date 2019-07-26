@@ -2,11 +2,19 @@
 */
 
 .row--schedule-grid {
-	padding: 4em;
-	
+	padding: 2em;
+
+	.modulesArea__row {
+	    padding-top: 2em;
+	    padding-bottom: 3em;
+	}	
 	.Module--mainContent {
 		display: flex;
 		flex-flow: wrap;
+		
+		max-width: 74em;
+		margin: 0 auto;
+		padding: 0;
 		
 		& > * {
 			width: 100%;

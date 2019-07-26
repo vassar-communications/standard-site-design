@@ -1,0 +1,77 @@
+/*
+	This is for the event listing on https://www.vassar.edu.staging/newstudents/orientation/index-internal.html
+*/
+
+.orientation {
+	margin-top: 1em;
+	
+	.modulesArea__row {
+		overflow: visible;
+	}	
+}
+
+.core-event {
+	font-size: 0.86em;
+	margin-right: 0.2em;
+	padding: 0em 0.2em; 
+//	text-transform: uppercase;
+
+	&:before {
+		content: "—";
+		margin-right: 0.4em;
+	}
+}
+
+
+.event {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 1em;
+    margin-bottom: 1em;
+    
+    @include small() {
+		column-gap: 1em;
+		display: grid;
+/*		grid-template-columns: 0.5fr 1.5fr;
+		grid-template-rows: auto auto 1fr;
+		grid-template-areas: "title title" "time description" "location description"; */
+
+		grid-template-columns: 0.5fr 1.5fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: "details title" "details description";
+
+		padding: 1em 0;
+    }
+}
+.event__details {
+	grid-area: details;
+	grid-row: span 2 / 3;
+}
+.event__title {
+	grid-area: title;
+	margin-bottom: 1em;
+}
+.event__desc {
+	grid-area: description;
+}
+.event__detail {
+	font-size: 0.9em !important;
+    margin-bottom: 0.3em;
+}
+.detail--core-event {
+    margin-bottom: 1em;
+
+	@include varfont-weight(500, bold);
+}
+
+.core-event {
+//	grid-area: details;
+}
+/*
+.schedule {
+    padding: 2em;
+
+    @include large() {
+	    padding: 0;
+	}
+}
+*/

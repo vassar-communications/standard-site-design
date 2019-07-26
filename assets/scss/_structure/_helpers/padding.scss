@@ -1,0 +1,90 @@
+.padding-small {
+	@include space(padding, $space-small);
+}
+.padding-sm-small {
+	@include small() {
+		@include space(padding, $space-small);
+	}
+}
+.padding-md-small {
+	@include medium() {
+		@include space(padding, $space-small);
+	}
+}
+.padding-lg-small {
+	@include large() {
+		@include space(padding, $space-small);	
+	}
+}
+
+
+.padding-medium {
+	@include space(padding, $space-medium);
+}
+.padding-sm-medium {
+	@include small() {
+		@include space(padding, $space-medium);
+	}
+}
+.padding-md-medium {
+	@include medium() {
+		@include space(padding, $space-medium);
+	}
+}
+.padding-lg-medium {
+	@include large() {
+		@include space(padding, $space-medium);	
+	}
+}
+
+
+.padding-large {
+	@include space(padding, $space-large);
+}
+.padding-sm-large {
+	@include small() {
+		@include space(padding, $space-large);
+	}
+}
+.padding-md-large {
+	@include medium() {
+		@include space(padding, $space-large);
+	}
+}
+.padding-lg-large {
+	@include large() {
+		@include space(padding, $space-large);	
+	}
+}
+
+
+.padding-verylarge {
+	@include space(padding, $space-verylarge);
+}
+.padding-sm-verylarge {
+	@include small() {
+		@include space(padding, $space-verylarge);
+	}
+}
+.padding-md-verylarge {
+	@include medium() {
+		@include space(padding, $space-verylarge);
+	}
+}
+.padding-lg-verylarge {
+	@include large() {
+		@include space(padding, $space-verylarge);	
+	}
+}
+
+
+
+
+	
+.no-padding {
+	padding: 0;
+}
+.no-padding-on-sides {
+	padding-left: 0;
+	padding-right: 0;
+}

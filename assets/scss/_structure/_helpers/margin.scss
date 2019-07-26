@@ -1,0 +1,103 @@
+/*	Margins
+	======= */
+
+/*	For maximum flexibility, we should be able to specify when we want this padding to apply. On the Congrats homepage, for instance, there's a row with very large padding that looks good at desktop, but not good at all at mobile. I could just modify that particular row's padding with a media query, but the idea here is to design as generically as possible: solve something now so we don't have to rewrite it later.
+	
+	I'm using the same notation I'm using for grids.
+	
+	Why mixins? Ordinarily I'd use an @extend, but @extends can't be used inside media queries. So rather than repeat everything manually, I set it up as a mixin.
+	
+	Eesh - the following is very repetitive. The ideal way to do this would have been to iterate across a set of lists and generate it, but just laying it all out here will be faster and clearer for now.
+*/
+
+
+.margin-small {
+	@include space(margin, $space-small);
+}
+.margin-sm-small {
+	@include small() {
+		@include space(margin, $space-small);
+	}
+}
+.margin-md-small {
+	@include medium() {
+		@include space(margin, $space-small);
+	}
+}
+.margin-lg-small {
+	@include large() {
+		@include space(margin, $space-small);	
+	}
+}
+
+
+.margin-medium {
+	@include space(margin, $space-medium);
+}
+.margin-sm-medium {
+	@include small() {
+		@include space(margin, $space-medium);
+	}
+}
+.margin-md-medium {
+	@include medium() {
+		@include space(margin, $space-medium);
+	}
+}
+.margin-lg-medium {
+	@include large() {
+		@include space(margin, $space-medium);	
+	}
+}
+
+
+.margin-large {
+	@include space(margin, $space-large);
+}
+.margin-sm-large {
+	@include small() {
+		@include space(margin, $space-large);
+	}
+}
+.margin-md-large {
+	@include medium() {
+		@include space(margin, $space-large);
+	}
+}
+.margin-lg-large {
+	@include large() {
+		@include space(margin, $space-large);	
+	}
+}
+
+
+.margin-verylarge {
+	@include space(margin, $space-verylarge);
+}
+.margin-sm-verylarge {
+	@include small() {
+		@include space(margin, $space-verylarge);
+	}
+}
+.margin-md-verylarge {
+	@include medium() {
+		@include space(margin, $space-verylarge);
+	}
+}
+.margin-lg-verylarge {
+	@include large() {
+		@include space(margin, $space-verylarge);	
+	}
+}
+
+.no-margin-on-sides:not(.modulesArea__row) {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+
+
+
+
+

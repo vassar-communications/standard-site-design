@@ -1,0 +1,98 @@
+/*
+	Grid system
+	===========
+	
+	The goals of this system: replace rows-and-cols with a grid system.
+
+*/
+
+@mixin cols($col1, $col2) {
+	//	Like the other helper classes, this may need to work different ways depending on what specific markup it's applied to.
+	//	Hopefully this can be replaced once we have a more block-based editing system up
+
+	&.modulesArea__row--twocols {
+		.Module:nth-child(1) {
+			width: $col1;
+		}
+		.Module:nth-child(2) {
+			width: $col2;			
+		}
+	}
+	&.modulesArea__row--onecol.imagestyle-sidecolumn {
+		.Module__image {
+			width: $col1;
+		}
+		.Module__desc {
+			width: $col2;
+		}
+	}
+}
+
+
+
+
+
+div.grid[class^='grid-md-'] {
+	/*	Means there doesn't have to be a "grid" class
+	*/
+	@media (min-width: $medium) {
+		
+	}
+}
+
+.grid-60-40 {
+	@include cols(60%, 40%);
+	
+	&-md {
+		@include medium() {
+			@include cols(60%, 40%);
+		}
+	}
+}
+
+.grid-70-30 {
+	@include cols(70%, 30%);
+	
+	&-md {
+		@include medium() {
+			@include cols(70%, 30%);
+		}
+	}
+}
+
+
+
+
+
+.grid {
+	&-twocols-sm,
+	&-sm-twocols {
+		@media (min-width: $small) {
+			display: flex;
+			
+			& > .grid-col {
+				width: 50%;
+			}
+		}
+	}
+	&-twocols-md,
+	&-md-twocols {
+		@media (min-width: $medium) {
+			display: flex;
+			
+			& > .grid-col {
+				width: 50%;
+			}
+		}
+	}
+	&-twocols-lg,
+	&-lg-twocols {
+		@media (min-width: $large) {
+			display: flex;
+			
+			& > .grid-col {
+				width: 50%;
+			}
+		}
+	}
+}

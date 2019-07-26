@@ -1,0 +1,2 @@
+.no-border, .no-border-on-children *, .no-border:hover, .no-border-on-children :hover, .no-border:visited, .no-border-on-children :visited {
+  border: none; }

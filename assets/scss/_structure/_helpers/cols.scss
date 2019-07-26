@@ -1,0 +1,11 @@
+.content-cols-3 {
+	%cols-3 {
+		@include small() {
+			column-count: 3;
+		}
+	}
+	
+	.Module--mainContent {
+		@extend %cols-3;
+	}
+}

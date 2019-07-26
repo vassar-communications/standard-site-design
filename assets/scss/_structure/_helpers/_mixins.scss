@@ -1,0 +1,14 @@
+@mixin space($type, $size) {
+	&:not(.modulesArea__row) {
+		//	Remember, on rows, I'm handling the content centering with left and right padding
+		//	so I don't want to reset that.
+		//	So I need to specify: only apply this to things that aren't rows.
+		#{$type}: $size;
+	}
+	&.modulesArea__row {
+		//	For other elements, we would want the padding to be entire
+		//	For rows, we only want more space above and below.
+		#{$type}-top: $size !important;
+		#{$type}-bottom: $size !important;	
+	}
+}

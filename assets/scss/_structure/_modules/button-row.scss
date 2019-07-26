@@ -1,0 +1,12 @@
+.button-row {
+	padding: 0 !important;
+
+	@include small() {
+		display: flex;
+	}
+
+	li {
+		list-style: none;
+		margin-right: 0.2em;
+	}
+}

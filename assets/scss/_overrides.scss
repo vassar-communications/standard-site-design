@@ -1,0 +1,29 @@
+/*	This file overrides things in the central styling that were interfering with the Admissions design. Scoping homepage/second-level stuff would help with this. 
+
+This is only needed because right now, this styling is built on blocks of CSS originally written by Jeff and Ray. Once all the styling is merged into one system, _overrides won't be necessary.
+	
+*/
+
+.u-pageInner {
+	.u-pageTitle {
+		display: block;
+		visibility: visible;
+	}
+}
+.u-Video {
+	margin: 0;
+}
+
+/*	This is to leave room for the nav at narrower screen sizes.
+	Works on Congrats, but may not be enough for sites with longer nav.
+*/
+@media screen and (min-width: 15em) {
+	.u-lMain, .u-thirdLevel .u-lMain {
+	    margin-top: 7em !important;
+	}
+}
+.u-lMain, .u-thirdLevel .u-lMain {
+	@include medium() {
+		margin-top: 4em !important;
+    }
+}

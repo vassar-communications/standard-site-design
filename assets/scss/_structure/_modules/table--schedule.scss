@@ -1,0 +1,15 @@
+.table--schedule {
+	caption {
+		@include varfont-weight(500, bold);
+	}
+	tr:nth-child(odd) {
+		background: transparent;
+	}
+	td {
+		border-bottom: 1px solid #aaa;
+		
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}

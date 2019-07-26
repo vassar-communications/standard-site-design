@@ -1,0 +1,16 @@
+/*	This is a little unusual. I'm not sure where to put this.
+
+This is styling applied to a row, but it primarily affects the content in the row. The content in the row is just regular markup - it's not a special module.
+
+*/
+
+.row--contact-listing {
+	h3 {
+		em {
+			display: block;
+			font-weight: normal;
+			font-size: 0.8em;
+			margin-top: 0.3em;
+   		}
+	}	
+}

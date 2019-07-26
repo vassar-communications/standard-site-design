@@ -1,0 +1,389 @@
+.u-lContent {
+	max-width: $contentwidth-standard;
+	margin-left: auto;
+	margin-right: auto;
+	
+	ul {
+		padding-left: 1.3em;
+	}
+}
+main {
+	//	resolves mysterious bug Safari 8 where main wouldn't show up at all
+	//	no clue why
+	position: relative;
+}
+
+.u-pageTitle {
+//	padding: 0 0.33em;
+
+	@include large() {
+		padding: 0;
+	}
+}
+img {
+	margin: 0;
+}
+.Module__fullWidthPageNav {
+	@extend .align-center;
+	max-width: $contentwidth-standard;
+	padding: 1em 0 !important;
+}
+.modulesArea__row.modulesArea--page-nav {
+
+	margin-top: 3em;
+	margin-top: 0;
+
+	@media screen and (min-width: $medium) {
+		margin-top: 2em;
+	}
+	margin-bottom: 2em;
+	padding: 0;
+
+	.Module__link {
+		border: none;
+	}
+	.Module__fullWidthPageNav {
+		padding-bottom: 1em;
+	}
+	& + .modulesArea__row {
+		padding-top: 0;
+	}
+	.Module__listItem {
+		display: inline;
+	}
+	.Module__title {
+		display: inline-block;
+	}
+}
+.Module__list,
+.Module__desc {
+	overflow: visible !important;
+}
+
+
+
+@media (min-width: $medium) {
+	.Module__fullWidthRoundImgCenter div:first-child,
+	.Module__fullWidthRoundImgCenter div:last-child {
+	    float: none;
+	    width: 100%;
+	}	
+	.Module__fullWidthRoundImgCenter div:first-child {
+	    margin-right: 0;		
+	}
+	.Module__fullWidthRoundImgCenter div:last-child {
+		margin-left: 0;
+	}
+}
+.row-title {
+    padding: 0 0.34em;
+    padding: 0;
+	
+	@include medium() {	
+		padding: 0;
+	}
+}
+
+.Module__fullWidthMargins.Module__fullWidthPageNav {
+	border: none;
+	padding: 0;
+
+	@media screen and (min-width: $medium) {
+//		margin: 3em auto 4em auto;
+	}
+	
+	.Module__list {
+		margin: 1% auto;
+	}
+}
+
+$col-gap: 2em;
+
+.index-list {
+	padding-left: 0 !important;
+	
+	li {
+		margin: 0 !important;
+		list-style: none;
+	}
+}
+
+
+.contact__col {
+	h3 {
+		em {
+			display: block;
+			font-size: 0.8em;
+			font-style: normal;
+			font-weight: normal;
+			margin: 0.2em 0;
+		}
+	}
+}
+
+
+/*	Modules and layouts */
+
+
+.Module--mainContent {
+	padding: 2em 0 0 0;
+//	padding: 0;
+
+	@media (min-width: $medium) {
+		padding: 0;
+	}
+
+	.Module__desc {
+		padding-bottom: 0;
+		
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.Module__listItem {
+		margin-bottom: 0;
+		padding-bottom: 0;		
+	}
+}
+
+.has-background {
+//    padding-top: 2em;
+//    padding-bottom: 2em;
+    
+    .Module__desc h2 {
+	    border: none;
+	    padding-top: 0 !important;
+    }
+}
+
+
+.u-lAside {
+    display: none;
+}
+main {
+	padding-bottom: 0;
+	//	On Congrats, the extra space made a white gap at the end of the page.
+}
+
+
+@media (min-width: $medium) {
+	.col-40 {
+		width: 40% !important;
+	}
+	.col-60 {
+		width: 60% !important;
+	}
+}
+.section-header {
+	width: 100% !important;
+
+	.Module__list {
+		margin: 0 !important;
+		max-width: none !important;
+	}
+}
+.Row--page-title {
+	@extend .section-header;
+
+	padding-top: 0;
+	padding-bottom: 2em;
+
+	.Module--mainContent {
+	    border-bottom: 1px solid rgba(115,102,96,0.26);
+		margin-bottom: 0.6em;
+		padding: 1em 0;
+		width: 100% !important;
+	}
+	
+	&.modulesArea__row--onecol {
+		.Module--mainContent {
+//			max-width: $content-maxwidth;
+//		    margin-left: auto;
+//		    margin-right: auto;
+		    padding-left: 0;
+		    padding-right: 0;
+		}
+	}
+}
+.Module__fullWidth,
+#Module__fullWidth {
+	width: 100%;
+}
+
+.Module--halfWidth {
+    margin: 0 !important;
+
+	@media (min-width: $medium) {
+		margin: 0 4%;
+		margin: 0;
+	}
+}
+
+@mixin max-width($width) {
+	padding-left: calc((100vw - #{$width}) / 2);
+	padding-right: calc((100vw - #{$width}) / 2);
+}
+
+@media (min-width: $medium) {
+	$twocols-max-width: 60em;
+
+	.modulesArea__row--twocols {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include max-width($twocols-max-width);
+	}
+	.Module__fullWidth.Module--halfWidth {
+		width: 50%;
+		margin: 0;
+		
+		// &:first-child
+		&:first-of-type {
+			padding-right: calc(#{$col-gap} / 2);
+		}
+		// &:last-child
+		&:last-of-type {
+			padding-left: calc(#{$col-gap} / 2);
+		}
+	}
+	.Module__fullWidthBleed .Module__list {
+		max-width: $contentwidth-standard;
+		margin: 0 auto;
+	}	
+}
+
+
+.Module__fullWidthBleed .Module__list {
+    margin: 0 4%;
+
+	@media (min-width: $medium) {
+	    margin: 4% auto;
+	}
+}
+
+.u-NavSite__level--2 {
+	display: none;
+}
+
+
+
+@media (min-width: $medium) {
+	.Module__fullWidthBleed .Module__list {
+	    margin: 4% auto;
+	    margin: 0 auto;
+	}
+}
+
+/*
+	Issue: margin collapse. The margin for the page inner nav (the in-page links) was extending outside the modulesArea, but was collapsing against the page title. The result was that there was no space between the page title and the in-page nav, since the top margin applied to the in-page nav, while it was there, was not pushing the in-page nav down.
+	
+	Adding a border to modulesArea fixes the margin collapse issue (so would overflow:auto, but that would crop full-bleed rows).
+	
+*/
+.modulesArea {
+	border: 1px solid transparent;
+}
+
+
+.modulesArea__row--onecol,
+.two-cols--narrow {
+	.row-title {
+		margin-top: 0;
+	}
+}
+
+
+.two-cols--inner {
+	/*	For situations where we need two columns inside one block */
+	
+	@media (min-width: $medium) {
+		display: flex;
+		flex-wrap: wrap;
+		
+		.col-inner {
+			width: 50%;
+		}
+	}
+}
+.modulesArea__row {
+	& > h2 {
+	    margin-bottom: 0.4em;
+		margin-top: 0;
+	}
+}
+.u-pageTitle {
+//	margin: 0 auto;
+	max-width: 53.6rem;
+//	margin-bottom: 0.6em;
+	margin-bottom: 0 !important;
+	text-align: center;
+
+	@media screen and (min-width: $medium) {
+		text-align: left;
+	}
+}
+
+/*
+.u-pageTitle + .modulesArea {
+	//	There's too much space between the page title and the first row. This adjusts it.
+	@media (min-width: $medium) {
+	    margin-top: -3em;
+	}
+}
+*/
+
+/*	Nav
+	===
+
+	I'm using the standard nav styling from Jeff's styling. The problem is that the nav is absolutely positioned even at mobile size, and if there are a lot of items, they wrap and cover the page title. I've reworked this to use flexbox.
+	
+	Hmm - there isn't any real page nav on the main second-level pages. Looks like the nav styling I'm inheriting is from Sustainability.
+*/
+
+.PageContentInner {
+    display: flex;
+    flex-direction: column;
+}
+.u-lHeader {
+    order: 1;
+}
+.u-NavSite {
+	margin-bottom: 2em;
+    order: 2;
+    position: static;
+}
+.u-lMain {
+    order: 3;
+    margin-top: 0 !important;
+    //	yeah, sorry about that, but it's already being importanted in the CSS I'm inheriting.
+}
+.u-lFooter {
+    order: 4;
+}
+
+
+/*	TEMPORARY ADMISSIONS STYLING
+	JUST FOR ABS-POSITIONED TABS
+	REMOVE AS SOON AS SECOND-LEVEL NAV IS IN */
+
+.u-lContent {
+//	margin-top: 3em;
+}
+.u-NavSite__level--2 {
+	.u-NavSite__item:focus, .u-NavSite__item:hover {
+		background: rgba(0,0,0,0.2);
+		padding-bottom: inherit;
+		margin-bottom: inherit;
+	}
+}
+
+
+.Module--mainContent {
+	overflow: visible;
+}
+
+
+
+

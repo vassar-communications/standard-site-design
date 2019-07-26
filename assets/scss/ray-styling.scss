@@ -1,0 +1,146 @@
+@media screen
+{    
+    .u-lMain
+    {
+        float: right;
+    }
+    
+    .u-lMain,
+    .u-thirdLevel .u-lMain
+    {
+        margin-top: 18em;
+    }
+    .u-NavSite
+    {
+        display: block;
+        padding: 0;
+        position: absolute;
+        visibility: visible;
+        width: 100%;
+    }
+    .u-NavSite__level
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .u-NavSite__item
+    {
+        font-size: 1.2em;
+        font-weight: normal;
+        flex: 0 1 auto;
+        line-height: 1;
+        padding: .75em;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .u-NavSite__item,
+    .u-NavSite__item:visited
+    {
+        color: $VC__vassarBurgundy;
+        color: $VC__vassarBurgundy;
+    }
+    .u-NavSite__item:focus,
+    .u-NavSite__item:hover
+    {
+        border-bottom: 0;
+    }
+    .u-NavSite__item:focus,
+    .u-NavSite__item:hover,
+    .u-NavSite__item--isCurrent,
+    .u-NavSite__item--isCurrent:visited
+    {
+        background-color: hsl(89, 47%, 34%);
+        background-color: $VC__vassarBurgundy;
+        color: #fff;
+    }
+    .u-NavSite__item:focus,
+    .u-NavSite__item:hover
+    {
+        margin-bottom: -.25em;
+        padding-bottom: 1em;
+    }
+    
+    .u-NavSite__item--isCurrent:focus,
+    .u-NavSite__item--isCurrent:hover
+    {
+        background-color: #000;
+        color: #c1b5b0;
+        padding-bottom: 1em;
+    }    
+}
+@media screen and (min-width: $small)
+{
+    .u-NavSite__level
+    {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .u-NavSite__level--1 .u-NavSite__item
+    {
+        font-size: 1.2em;
+    }
+}
+@media screen and (min-width: $medium)
+{    
+    .u-lMain
+    {
+        float: right;
+    }    
+}
+@media screen and (min-width: 62em)
+{
+    .u-NavSite
+    {
+        left: 0;
+        margin: 0 auto;
+//        max-width: 70em;
+
+		/*	was causing some items on New Students to wrap */
+        max-width: 80em;        
+        position: absolute;
+        right: 0;
+        width: 100%;
+    }
+    .u-NavSite__item
+    {
+        float: left;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+@media screen and (min-width: 15em)
+{
+    .u-lMain,
+    .u-thirdLevel .u-lMain
+    {
+        margin-top: 12em;
+    }    
+}
+@media screen and (min-width: 26em)
+{
+    .u-lMain,
+    .u-thirdLevel .u-lMain
+    {
+        margin-top: 8em;
+    }    
+}
+@media screen and (min-width: $small)
+{
+    .u-lMain,
+    .u-thirdLevel .u-lMain
+    {
+        margin-top: 6em;
+    }
+}
+@media screen and (min-width: $medium)
+{
+    .u-lMain,
+    .u-thirdLevel .u-lMain
+    {
+        margin-top: 4em;
+    }    
+}

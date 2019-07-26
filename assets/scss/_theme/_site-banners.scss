@@ -1,0 +1,111 @@
+/*
+	This specifies which banner images go with which pages on Admissions, New Students, Congrats, and any other site that uses Admissions styling. This is not the best way of doing it.
+
+I would like page-specific banner images to be defined in the CMS, when editing a page—they shouldn't be part of the central styling. Once we have that capability, this file can go away.
+
+*/
+
+@mixin header($class, $image) {
+	#{$class} & {
+		background-image: url("#{$assets-path}#{$image}");
+	}
+}
+@mixin local-header($class, $image) {
+	#{$class} & {
+		background-image: url("/admissions/assets/images/banners/#{$image}");
+	}
+}
+
+
+
+.u-lHeader {
+
+/*	Congrats
+	-------- */
+
+	@include header('.u-folderOpen-house', '0203_17_04_KR_0155.jpg');
+	@include header('.u-folderVisit-schedule', '0098_15_09_KR_0019.jpg');
+	@include header('.u-folderAdmitted-student-stats', 'Raymond-House-1704-KR-0052.jpg');
+	@include header('.u-folderFaqs', 'Move-In-Day-1808-KR_1767.jpg');
+
+	@include header('.u-folderReceptions', '0139_16_11_KR_0114.jpg');
+
+/*	New Students
+	------------ */
+
+	@include header('.u-pageHome.u-folderNewstudents', '0110_15_10_TT_6291_edit.jpg');
+	@include header('.u-folderInternational-students', '0111_14_11_KR_0067.jpg');
+	@include header('.u-folderFirst-year-students', '0137_14_11_KR_0123.jpg'); // VC_ACDC students_KR.jpg
+//	@include header('.u-folderOrientation', '0139_16_11_KR_0114.jpg');
+	@include header('.u-folderOrientation', '0177_16_09_KR_0086.jpg');
+	@include header('.u-folderTransfer', '0098_15_09_KR_0068_edit.jpg');
+	@include header('.u-folderForms-tests', '0007_16_02_KR_0054.jpg');	
+	@include header('.u-folderAnswers', 'adm-site-banner.jpg');
+
+
+/*	Admissions
+	---------- */
+
+//	@include header('.u-folderContact', 'masthead-5_Campus.jpg');
+//	@include local-header('.u-folderApply', '0139_16_11_KR_0114.jpg');
+	@include header('.u-folderFinancial-aid', 'masthead-7_Campus.jpg');
+//	@include header('.u-folderAfter-vassar', 'masthead-12_Campus.jpg');
+	@include header('.u-folderClass-profile', 'masthead-15_Student-Life.jpg');
+	@include header('.u-folderVisit-us', 'masthead-6_Campus.jpg');
+
+	@include local-header('.u-folderOpenhouse', '0110_15_10_TT_6291_edit.jpg');
+	@include local-header('.u-folderCampus', '0019_12_04_TT_0796.jpg');
+	@include local-header('.u-folderClassvisits', '0098_15_09_KR_0019.jpg');
+	@include local-header('.u-folderOvernight', '0032_15_04_JA_655.jpg');
+	@include local-header('.u-folderGroup-tours', '0152_13_10_-KF_0321.jpg');
+	@include local-header('.u-folderTour', '0162_14_11_TT_2356.jpg');
+
+	@include local-header('.u-folderForms', '0074_16_07_KR_0048.jpg');
+	@include local-header('.u-folderStudent-faqs', '0075_16_07_KR_0075.jpg');
+	@include local-header('.u-folderCampus', '0092_16_08_BL_5883.jpg');
+
+	@include local-header('.u-folderRequirements', '0046_16_04_KR_0007.jpg');
+	@include local-header('.u-folderDiversity', '0074_15_08_KR_0088.jpg');
+	@include local-header('.u-folderOvernight', '0093_14_10_KR_0103.jpg');
+	@include local-header('.u-folderAward', '0177_16_09_KR_0066.jpg');
+	@include local-header('.u-folderGrants-and-scholarships', '0162_14_11_TT_2262.jpg');
+	@include local-header('.u-folderLoans-and-lenders', '308_Bridge_Vassar_May-2019_JA.jpg');
+	@include local-header('.u-folderCampus-employment', '0014_13_02_JA_380.jpg');
+	@include local-header('.u-folderTuition', 'Vassar_Campus_20190508_KR_4959.jpg');
+	@include local-header('.u-folderForms', 'Vassar_Dorm_20190506_KR_4372.jpg');
+	@include local-header('.u-folderContact', 'Vassar_Campus_20190508_KR_5086.jpg');
+	@include local-header('.u-folderInterviews', '0006-19-01-kr-0681-sophomore-career-conn-vassar.jpg');
+	@include local-header('.u-folderCampus', '0152_13_10_-KF_0399.jpg');
+	@include local-header('.u-folderArts', 'HW_26A1208.jpg');
+	@include local-header('.u-folderVeterans', '0003_16_01_SS2_133.jpg');
+	@include local-header('.u-folderAfter-vassar', '0114_18_09_KR_3643.jpg');
+	@include local-header('.u-folderRegional', '0001_15_01_SS2_052.jpg');
+	@include local-header('.u-folderFive-colleges', '0019_12_04_TT_0814.jpg');
+	
+	@include local-header('.u-folderApply', 'Vassar_Campus_20190508_KR_5240.jpg');
+	@include local-header('.u-folderFinancial-aid', 'Vassar_Campus_20190508_KR_5302.jpg');
+
+
+// 0009_17_02_KR_0055.jpg
+	
+	/*
+	@include local-header('.u-folderOpen-house', '0123_15_11_KR_0031.jpg');
+	@include local-header('.u-folderOpen-house', '0139_16_11_KR_0114.jpg');
+	@include local-header('.u-folderOpen-house', '0141_14_11_KR_0234.jpg');
+	@include local-header('.u-folderOpen-house', '0152_13_10_-KF_0321.jpg');
+	@include local-header('.u-folderOpen-house', '0152_13_10_-KF_0490.jpg');
+	@include local-header('.u-folderOpen-house', '0162_14_11_TT_2356.jpg');
+	@include local-header('.u-folderOpen-house', '0177_16_09_KR_0086.jpg');
+	@include local-header('.u-folderOpen-house', '0203_17_04_KR_0155.jpg');
+	@include local-header('.u-folderOpen-house', 'ALANA-Fest-1709-KR-1599.jpg');
+	*/
+
+}
+
+
+
+
+
+
+
+

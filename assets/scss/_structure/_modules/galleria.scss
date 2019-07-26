@@ -1,0 +1,215 @@
+/* Galleria */
+.galleria-info-title {
+    display: inline;
+	font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
+
+    @include small() {
+        font: normal $fontWeightNormal 2em/1 $sans-serif-condensed !important;
+	}
+    @include medium() {
+		font: normal $fontWeightNormal 3em/1 $sans-serif-condensed !important;
+    }
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    &:after {
+        content: ":";
+        margin: 0 .25em 0 0;
+    }
+    .alumName {
+        margin: 0 0 0 .25em;
+    }
+}
+.galleria--alumnaei-spotlight {
+    font-size: 88.9%;
+}
+.galleria-button-link,
+.button-link {
+    font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    padding: 0 .25em .19em;
+}
+.galleria-info-description,
+.galleria-counter {
+    font: normal $fontWeightNormal 1em/1.2 $sans-serif !important;
+}
+.galleria-info-description {
+    display: inline;
+}
+@media screen {
+    .galleria {
+	    /*	Padding is necessary because the caption is absolutely positioned. On mobile, if the galleria area isn't high enough, long captions will get cropped. Padding boosts the height so the captions don't get cropped. */
+		padding-bottom: 13em;
+        z-index: 1;
+    }
+    .galleria-container {
+       overflow:visible;
+    }
+    .galleria--content {
+        margin: 0;
+    }
+    .galleria-info {
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        right: auto;
+    }
+    .galleria-info-text {
+        padding: 4%;
+        position: absolute;
+        display: block;
+        width: 100%;
+    }
+    .galleria-tooltip {
+       margin-bottom: 0;
+    }
+    .galleria-button {
+        margin: 0;
+        display: block;
+        text-align: right;
+        padding: 0 .25em .19em;
+    }
+    /*.galleria-desc-container, */
+    .galleria-info-title {
+        display: block;
+    }
+    .galleria-counter {
+        bottom: auto;
+        left: auto;
+        right: 1em;
+        opacity: 1 !important;
+        padding: .25em .5em;
+        &:after {
+            border-radius: 0;
+        }
+    }
+    .galleria-image-nav-left,
+    .galleria-image-nav-right {
+        opacity: .5;
+        filter: alpha(opacity=50);
+        background-position: 0 50%;
+    }
+    .galleria-image-nav-right {
+        background-position: -255px 50%;
+    }
+    .galleria-container.notouch:hover .galleria-image-nav-right, .galleria-container.touch:active .galleria-image-nav-right {
+        background-position: -255px 50%;
+    }
+    .galleria-container.notouch:hover .galleria-image-nav-left, .galleria-container.touch:active .galleria-image-nav-left {
+        background-position: 0 50%;
+    }
+    .Module__fullWidthNews {
+        overflow: visible;
+    }
+}
+@media all and (min-width: $small) {    
+   .galleria {
+       padding-bottom: 0;
+   } 
+   .galleria-container {
+       overflow:hidden;
+   }
+    .galleria-info-title {
+        display: block !important;
+        &:after {
+            content: "";
+            margin: 0;
+        }
+        .alumName {
+            display: block;
+            font-size: 40%;
+            letter-spacing: 0.2em;
+            margin: 0;
+        }
+    }
+    .galleria-desc-container {
+        display: block;
+    }
+    .galleria--alumnaei-spotlight .galleria-desc-container {
+        display: inline;
+    }
+    .button {
+        margin: 1.75em 0 1em;
+    }
+    .button {
+        text-align: center;
+    }
+    .galleria-button-link,
+    .button-link {
+        font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        padding: 0 .25em .19em;
+    }
+    .button-link {
+        font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
+        padding: 0 .5em .19em;
+    }
+    .galleria-info-description,
+    .galleria-counter,
+    .galleria-link {
+        font: normal $fontWeightNormal 1em/1.2 $sans-serif !important;
+    }
+    .galleria-link {
+        padding: 0;
+        text-transform: none;
+    }
+    .galleria-info {
+//      bottom: 2em;
+		bottom: 0;
+        top: auto;
+//      left: 3em;
+		left: 0;
+        width: 33%;
+    }
+    .galleria-info-text {
+        position: relative;
+    }
+    .galleria-counter {
+        bottom: 2em;
+        right: 2em;
+    }
+}
+.galleria-info-description.u-Figure__caption--description .galleria-button-link,
+.galleria-button-link {
+    background-color: $linkColor;
+    color: #fff !important;
+    border: 1px solid #fff;
+    &:visited {
+        background-color: $linkColor;
+        color: #fff !important;
+    }
+    &:hover,
+    &:focus {
+        background-color: $linkColorHoverFocus;
+        color: #fff !important;
+    }
+    &:active {
+        background-color: $linkColorActive;
+        color: #fff !important;
+    }
+}
+.galleria-info-text {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.65) !important;
+}
+.galleria-info-description.u-Figure__caption--description {
+    color: #fff !important;
+    a {
+        border-bottom: 1px solid #fff;
+    }
+    a:visited {
+        color: #fff !important;
+        border-bottom: 1px solid #fff;
+    }
+    a:hover,
+    a:focus {
+        color: $linkColorHoverFocus !important;
+        border-bottom: 1px solid $linkColorHoverFocus !important;
+    }
+    a:active {
+        color: $linkColorActive !important;
+        border-bottom: 1px solid $linkColorActive !important;
+    }
+}

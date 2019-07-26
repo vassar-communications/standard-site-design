@@ -1,0 +1,76 @@
+.width-half {
+	@media (min-width: $medium) {
+		width: 50%;
+	}
+}
+.width-third {
+	width: 50%;
+	
+	@media (min-width: $medium) {
+		width: 33%;
+	}
+}
+
+/*
+	- For rows without an attached image, I have to use padding to set max-width.
+	- For rows with an attached image, I can use max-width itself, since both the image and the content are contained in a list. 
+
+
+*/
+
+.width-standard {
+	&.modulesArea__row {
+		@include max-width($contentwidth-standard);
+	}
+	&.has-image {
+		.Module__list {
+			max-width: $contentwidth-standard;
+			margin: 0 auto;
+		}
+	}
+}
+.width-wide {
+	&.modulesArea__row {
+		@include max-width($contentwidth-wide);
+	}
+	&.has-image {
+		.Module__list {
+			max-width: $contentwidth-wide;
+			margin: 0 auto;
+		}
+	}
+	&.u-Figure {
+		@include large() {
+			width: 110%;
+		}
+		@include xlarge() {
+			width: 120%;
+		}
+	}
+}
+.width-wider {
+	&.modulesArea__row {
+		@include max-width($contentwidth-wider);
+	}
+	&.has-image {
+		.Module__list {
+			max-width: $contentwidth-wider;
+			margin: 0 auto;
+		}
+	}
+	&.u-Figure {
+		@include large() {
+			width: 120%;
+		}
+		@include xlarge() {
+			width: 130%;
+		}
+	}
+
+
+}
+.width-full {
+	&.modulesArea__row {
+		padding: 0;
+	}	
+}

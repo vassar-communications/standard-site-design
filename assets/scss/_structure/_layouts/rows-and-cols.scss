@@ -1,0 +1,381 @@
+
+/*	Basic layout
+	============ */
+
+.modulesArea__row {
+    clear: both;
+    overflow: hidden;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+
+	padding-top: 1.3em;
+	padding-bottom: 1.3em;
+
+	
+	/*	Rows with backgrounds need a little more padding than rows without them. This styling adds extra space to rows with backgrounds. */
+	
+	&[class*="bg-"] {
+		@include medium() {
+			margin-top: 1em !important;
+			margin-bottom: 1em !important;
+			padding-top: 2.3em;
+			padding-bottom: 2.3em;
+		}
+	}
+	&:first-child {
+		@media (max-width: $medium) {
+			padding-top: 0;
+		}
+	}
+}
+
+/*	Adjustments
+	=========== */
+
+.padding-normal {
+	&.modulesArea__row {	
+	}
+}
+
+
+.modulesArea__row--onecol {
+	padding-left: 1em;
+	padding-right: 1em;
+	
+	padding-left: 2em;
+	padding-right: 2em;
+	
+	@include medium() {
+		@include max-width($contentwidth-standard);
+	}
+}
+.modulesArea__row--twocols {
+	@include medium() {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.Module {
+		@include medium() {
+			width: 50%;
+			
+			&:first-child {
+				padding-right: 1em;
+			}
+			&:last-child {
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+.has-background {
+	
+}
+
+
+
+/*	Rows with imagery
+	================= */
+
+/*	Image as background */
+
+.row--image-wide {
+    padding-top: 1em;
+    padding-bottom: 0;
+	
+	.Module--halfWidth {
+	    float: none;
+	    margin: 0;
+	    width: 100%;	
+	}
+}
+
+.imagestyle-textoverlay {
+	background-size: cover;
+	padding-top: 4em;
+    padding-bottom: 4em;
+	position: relative;
+	background-position: center center;
+
+	@extend .light-text;
+	
+	&:before {
+		background: rgba(0,0,0,0.6);
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.row-title,
+	.Module {
+		position: relative;
+		z-index: 10;
+	}
+}
+
+.imagestyle-feature {
+    background-size: contain;
+    background-repeat: no-repeat;
+	position: relative;
+	padding-top: 40%;
+
+	@media (min-width: $medium) {
+		padding-top: 40%;
+	}
+	
+	.row-title,
+	.Module {
+		position: relative;
+		z-index: 10;
+	}
+	.Module__desc {
+		background: rgba(0,0,0,0.6);
+		color: #fff;
+		padding: 0.25em 2em;
+		padding: 0 2em;
+		position: relative;
+		z-index: 4;
+
+		@media (min-width: $medium) {
+			padding: 2em;
+		}
+
+		h2 {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+			border-top: none;
+		}
+	}
+	.l-block.info-chunk {
+		background: transparent;
+	}
+	.section-header {
+		.Module__desc {
+			background: transparent;
+		}
+	}
+}
+
+
+/*	Image attached */
+
+.image-attached {
+	position: relative;
+	overflow: hidden !important;
+	
+	.Module--list {
+		overflow: visible;
+	}
+	.Module__listItem {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media (min-width: $medium) {
+			flex-direction: row;
+		}
+	}
+	.Module__desc {
+		@media (min-width: $medium) {
+			order: 1;
+			width: 50%;
+			padding-right: 1em;
+		}
+	}
+	.Module__image {
+		@media (min-width: $medium) {
+			order: 2;
+			width: 50%;
+					
+			img {
+				max-width: none;
+				position: absolute;
+				top: 0;
+				width: calc(24em + ((100vw - 48em)/2));
+			}
+		}
+	}
+}
+
+.imagestyle-sidecolumn {
+	
+	/*	Deprecate this in favor of a more generic solution. So there won't be an "imagestyle" class any more (although keep this for now because Congrats and Admissions use it). Stop using this class and remove it from the documentation.
+	
+	Instead: set up a grid class. So: grid--50-50, grid--60-40. These classes could be applied to any situation where we have two elements that need to sit side by side. Hopefully this will be replaced at some point by a more flexible block-based system.
+	
+	*/
+	
+	padding: 0;
+	
+	@include medium() {
+		padding: 3em;
+		
+		/* I just added the @include now. This might impact styling on Congrats, since it uses imagestyle-sidecolumn. Do this:
+		 - Upload this style to Mundy. See what it does to the layout. Check this on iMac.
+		 - Don't upload to Congrats. Check Congrats on iMac. Compare the specific max-width one vs the 3em all around one.
+		*/
+		
+//		@include max-width($contentwidth-wide);
+	}
+	.Module__list {
+		max-width: 70em;
+		margin: 0 auto;
+	}
+	.Module__listItem {
+		@include medium() {
+			display: flex;
+		}
+	}
+	.Module__image,
+	.Module__desc {
+		@include medium() {
+			width: 50%;
+		}
+	}
+	.Module__image {
+		@include medium() {
+			padding-right: 1em;
+		}
+	}
+	.Module__desc {
+		@include medium() {
+			padding-left: 1em;
+		}
+	}
+	&.sidecolumn--image-right {
+		.Module__listItem {
+			@include medium() {
+				flex-direction: row-reverse;
+			}
+		}
+		.Module__desc {
+			@include medium() {
+				padding-right: 2em;
+			}
+		}
+	}
+}
+
+.imagestyle-contentontop {
+	.Module__listItem,
+	.Module__link {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+.image-attached,
+.imagestyle-contentontop {
+	.Module--mainContent .Module__desc p:last-child {
+		margin-bottom: 1em;
+	}	
+}
+
+
+
+
+
+.modulesArea__row {
+	h2 {
+		width: 100%;
+	}
+}
+
+.modulesArea__row:last-child {
+    padding-bottom: 6em !important;
+}
+
+
+
+.has-image {
+	img {
+		width: 100%;
+	}
+}
+
+.css-cols-4 {
+	@include small() {
+		column-count: 3;
+		column-gap: 0.4em;
+	}
+	@include medium() {
+		column-count: 4;
+		column-gap: 0.4em;
+	}
+}
+
+
+.modulesArea__row.full-width {
+	margin-top: 3em;
+	padding: 0 !important;
+	
+	.Module--mainContent {
+		max-width: none;
+	}
+}
+
+.modulesArea__row.width-wider {
+	.Module--mainContent {
+		max-width: 50em;
+	}
+}
+.modulesArea__row.row--feature {
+	padding: 4em !important;
+	
+	p {
+		max-width: 40em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+
+.row-no-padding {
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

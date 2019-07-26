@@ -1,0 +1,28 @@
+/*	Currently, list modules are getting styling from the homepage, which means the items are all-caps, large, and set in Acumin. I need to override all that.
+*/
+
+.Module--list.content-list {
+	.Module__header {
+		@extend .module-title;
+	}
+	.Module__desc {
+		@extend .sansserif-small;
+		color: $VC__vassarGray;
+		margin-top: 0.3em;
+	}
+	.Module__listItem {
+		border-bottom: 1px solid $VC__vassarLightGray;
+	}
+	.Module__title {
+		@extend .module-content;
+		letter-spacing: normal;
+		margin-bottom: 0;
+		text-align: left;
+		text-transform: none;
+	}
+	.Module__link {
+		border: none;
+		display: block;
+		padding: 0.3em 0;
+	}
+}

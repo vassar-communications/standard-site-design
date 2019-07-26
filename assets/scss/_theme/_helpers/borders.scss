@@ -1,0 +1,12 @@
+
+.no-border {
+	&, &:hover, &:visited {
+		border: none;
+	}
+}
+.no-border-on-children {
+	//	For situations where you can't apply a class to the element you need to remove a border from. The situation at hand: A list module has an entire link applied to it, which means its associated image also has a border under it. This looks weird. I could write a rule for that specific module, but I'd prefer to do something more generic.
+	* {
+		@extend .no-border;
+	}
+}

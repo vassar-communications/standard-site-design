@@ -1,0 +1,83 @@
+.u-folderCongratulations,
+.u-folderCongrats2023 {
+	.u-NavSite {
+		z-index: 10;
+	}
+	.u-lHeader {
+		background-image: none;
+	    background: none;
+	    margin-bottom: 2em;
+	    padding: 0 !important;
+	}
+	.u-Masthead__siteName {
+		text-align: center;
+	    text-shadow: none;
+
+	    &--link {
+	        background: none;
+	        margin-left: 0;
+
+			overflow: hidden;
+			padding-bottom: 0;
+
+			.congrats {
+			    color: #aaa;
+			    display: block;
+			    font-size: 0.5em;
+			    text-align: center;
+			    margin: 1.4em 0 0.5em 0;
+			}
+			.year {
+				display: flex;
+
+				b {
+					color: $VC__vassarBurgundy;
+					@supports(-webkit-background-clip: text) {
+						-webkit-text-fill-color: transparent;
+						-webkit-background-clip: text;
+						background-blend-mode: screen;
+						background-size: cover;
+					}
+					font-family: $var-sans-serif-boldnumbers;
+//					font-variation-settings: 'wght' 900;
+					font-size: 34vw;
+					letter-spacing: -0.03em;
+					line-height: 0.74;
+
+					@supports(-webkit-background-clip: text) {
+						&:nth-child(1) {
+	//						background-image: url(../images/header-photo-1.jpg), linear-gradient(to bottom, rgba(134,31,65,1) 0%,rgba(134,31,65,1) 100%);
+							background-image: url(../images/header-photo-1.jpg);
+	
+						}
+						&:nth-child(2) {
+	//						background-image: url(../images/header-photo-2.jpg), linear-gradient(to bottom, rgba(134,31,65,1) 0%,rgba(134,31,65,1) 100%);
+							background-image: url(../images/header-photo-2.jpg);
+						}
+						&:nth-child(3) {
+	//						background-image: url(../images/header-photo-3.jpg), linear-gradient(to bottom, rgba(134,31,65,1) 0%,rgba(134,31,65,1) 100%);
+							background-image: url(../images/header-photo-3.jpg);
+						}
+						&:nth-child(4) {
+	//						background-image: url(../images/header-photo-4.jpg), linear-gradient(to bottom, rgba(134,31,65,1) 0%,rgba(134,31,65,1) 100%);
+							background-image: url(../images/header-photo-4.jpg);
+						}
+					}
+				}
+			}
+	    }
+	}
+	&.varfont-fix {
+		.u-Masthead__siteName {
+			margin-bottom: -0.8em;
+	
+			.year {
+				b {
+					line-height: 0.84;
+				}
+			}
+		}
+	}
+}
+
+

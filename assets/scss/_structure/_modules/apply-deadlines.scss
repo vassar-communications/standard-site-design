@@ -1,0 +1,15 @@
+.mod--deadlines {
+	.index-list {
+		li {
+			em {
+				@include varfont-weight(600, 600);
+
+				font-style: normal;
+				
+				&:before {
+					content: "- ";
+				}
+			}
+		}
+	}
+}

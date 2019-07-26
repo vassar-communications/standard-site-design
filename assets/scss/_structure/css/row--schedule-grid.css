@@ -1,0 +1,16 @@
+/*	This is for a row containing tables, typically smaller ones uses as schedules. Not sure how often we'll use it, but it might be used on conference sites like SILA or Tensegrity.
+*/
+.row--schedule-grid {
+  padding: 4em; }
+  .row--schedule-grid .Module--mainContent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap; }
+    .row--schedule-grid .Module--mainContent * {
+      width: 100%; }
+    .row--schedule-grid .Module--mainContent table {
+      width: 33%; }

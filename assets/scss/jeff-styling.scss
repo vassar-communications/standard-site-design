@@ -1,0 +1,95 @@
+.Module__fullWidthFacts {
+    .Module__list {
+        margin-top: 1%;
+    }
+    .Module__listItem {
+        margin-bottom: .25em;
+        padding-bottom: 0;
+    }
+	.Module__subList {
+		text-align: center;
+		.Module__title {
+			font-size: 1.5em;
+			font-weight: $fontWeightBold;
+    		padding-bottom: 0.5em;
+		}
+		.Module__desc {
+			font-size: 1.5em;
+			font-weight: $fontWeightBold;
+		}	
+	}
+    .moreLink {
+        text-align: center;
+        font: normal $fontWeightNormal 1.75em/1 $sans-serif-condensed;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        font-size: 1.5em;
+    }
+}
+@media screen {
+	.Module__fullWidthFacts {
+		.Module__subList {
+			display: flex;
+			flex-wrap: wrap;
+			.Module__listItem {
+				flex-grow: 1;
+				padding: 0 2%;
+			}		
+		}
+		.Module__listItem {
+			text-align: center;
+		}
+	}
+}
+@media all and (min-width: $small) {
+}
+.Module__fullWidthFacts {
+	.Module__subList {
+		.Module__title {
+    		border-bottom: .2em solid #e3e0df;
+			color: #9c9390;
+		}
+		.Module__desc {
+			color: $linkColor;
+		}
+	}
+}
+.u-lHeader {
+    background: #666 url(../../../assets/images/academics-header-bg.jpg) no-repeat center;
+	background-size: cover;
+}
+.Module__fullWidthFacts .Module__desc .moreLink, .Module__fullWidthFacts .Module__desc .moreLink:visited {
+  color: #882344;
+  border-bottom: 2px solid #882344 !important;
+}
+.Module__fullWidthFacts .Module__desc .moreLink:active {
+  color: #746661;
+  border-bottom: 2px solid #746661 !important;
+}
+.Module__fullWidthFacts .Module__desc .moreLink:hover, .Module__fullWidthFacts .Module__desc .moreLink:focus {
+  color: #c1b5b0;
+  border-bottom: 2px solid #c1b5b0 !important;  
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+.button-link {
+    background-color: $linkColor;
+    color: #fff !important;
+    border: 1px solid #fff;
+    &:visited {
+        background-color: $linkColor;
+        color: #fff !important;
+    }
+    &:hover,
+    &:focus {
+        background-color: $linkColorHoverFocus;
+        color: #fff !important;
+    }
+    &:active {
+        background-color: $linkColorActive;
+        color: #fff !important;
+    }       
+}

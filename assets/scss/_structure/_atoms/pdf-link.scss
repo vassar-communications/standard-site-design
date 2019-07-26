@@ -1,0 +1,20 @@
+.icon-pdf {
+	&:before {
+	    background: #d00;
+	    color: #fff;
+	    content: "PDF";
+	    font-size: 0.7em;
+	    font-weight: bold;
+	    letter-spacing: 0.04em;
+	    margin-right: 0.4em;
+	    padding: 0.1em 0.3em;	
+	}
+}
+
+.pdf-list {
+	li, td {
+		& > a[href$=".pdf"] {
+			@extend .icon-pdf;
+		}	
+	}
+}

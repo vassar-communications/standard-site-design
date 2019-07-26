@@ -1,0 +1,7 @@
+.Module--list.profile-list .Module__list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.Module--list.profile-list .Module__listItem {
+  margin-left: 0;
+  width: 50%; }

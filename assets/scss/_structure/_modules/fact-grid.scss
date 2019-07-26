@@ -1,0 +1,118 @@
+@function has-key($map, $defaults, $key) {
+  @if map-has-key($map, $key) {
+      @return map-get($map, $key);
+    } @else {
+      @return map-get($defaults, $key);
+  }
+}
+
+@mixin sequence($map:(item: 1)) {
+
+	$defaults: (
+		gap: 0.4s,
+		offset: 0s,
+		max-items: 20,
+	);
+	
+	$gap: has-key($map, $defaults, gap);
+	$offset: has-key($map, $defaults, offset);
+	$max-items: has-key($map, $defaults, max-items);
+
+	@for $i from 1 through $max-items {
+		.js &:nth-child(#{$i}) {
+			animation-delay: $offset + ($gap * $i);
+		}
+	}
+}
+@mixin fade-in() {
+	opacity: 0;
+	
+	@keyframes anim-fadein {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	animation-name: anim-fadein;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+.fact-spread {
+	opacity: 0;
+	transition: all ease 0.4s;
+	margin-top: 2em;
+    background: #882344;
+    padding: 2.8em;
+}
+.fact-spread,
+.fact-spread * {
+    box-sizing: border-box;
+}
+.fact-spread ul {
+	@media (min-width: $medium) {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+    margin: 0;
+}
+.fact-spread li {
+	list-style: none;
+    color: #fff;
+    padding: 1.4em !important;
+    font-size: 1.2em;
+    margin: 0;
+
+	@media (min-width: $small) {
+	    display: flex;
+    }
+	@media (min-width: $large) {
+	    width: 33.3%;
+	}
+	
+	&:before {
+	    display: none;
+	}
+	strong:first-of-type {
+	    display: block;
+	    float: left;
+	    font-family: $sans-serif-condensed;
+	    font-size: 4em;
+	    font-weight: 100;
+	    line-height: 0.67;
+		margin-bottom: 0.1em;
+	    padding-right: 0.2em;
+	}
+}
+html:not(.js) .fact-spread {
+	opacity: 1;
+	
+	li {
+		opacity: 1;
+	}
+}
+.fact-spread.animate {
+	
+	li {
+		@include fade-in();
+		@include sequence();
+	}
+	opacity: 1;
+}
+
+.facts {
+//	margin: 2em 0;
+	padding: 0;
+	
+	.Module--mainContent {
+		padding: 0 !important
+	}
+	.Module__list {
+		max-width: none !important;
+		margin: 0 !important;
+	}
+}
+
+
+

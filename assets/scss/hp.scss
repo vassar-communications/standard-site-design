@@ -1,0 +1,310 @@
+.u-pageHome {
+	.modulesArea__row {
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		@media screen and (min-width: $medium) {
+			padding-top: 1em;
+			padding-bottom: 2em;
+		}
+	}
+	.announcements {
+		h3 {
+			@extend .module-title;
+		}
+	}
+	.class-profile-link {
+		text-align: center;
+		font-size: 0.9em;
+		
+		.Module__desc {
+			display: inline-block;
+			@extend .bold;
+		}
+	}
+	.Module__fullWidthFacts {
+	    margin: 2em 0;
+	    margin-bottom: 0;
+
+		.Module__list {
+			margin: 0 auto;
+		}
+	}
+	.Module__fullWidthIntroAnnouncements {
+//		margin: 3em 0;
+		margin: 0;
+		
+		.Module__list {
+			.Module__listItem:last-child {
+				.Module__desc {
+					padding: 2em;
+					background: $VC__vassarVeryLightGray;
+				}
+			}
+			@media screen and (min-width: $medium) {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 2% auto;
+				
+				.Module__listItem:first-child {
+					width: 56%;
+				}
+				.Module__listItem:last-child {
+					padding-left: 2em;
+					width: 43%;
+				}
+			}
+		}
+	}
+	.u-lContent {
+		//margin-bottom: 2em;
+		//	On Congrats, the extra space was causing a gap at the end of the page.
+	}
+
+/*
+	.reqinfo {
+		@media screen and (min-width: $small) {
+//			align-items: center;
+//			display: flex;
+//			flex-wrap: wrap;
+			
+			.button__desc {
+				padding-left: 0.6em;
+				margin: 0;
+			}
+		}
+		@media screen and (min-width: $large) {
+			.button__desc {
+				padding-left: 0;
+			}
+		}
+	}
+*/
+	.gridspacing-medium {
+		.Module__listItem {
+			padding: 1em;
+		}
+	}
+	.hp-social {
+		max-width: 60em;
+		margin: 0 auto;
+		
+		.Module__list {
+			display: flex;
+			justify-content: center;
+		}
+		.Module__listItem {
+			margin: 0 1em;
+			width: 4em;
+		}
+		.Module__link {
+			border: none;
+			display: block;
+			padding: 0.3em;
+
+			&:hover {
+				transform: scale(1.2);
+				z-index: 99;
+			}
+		}
+	}
+
+	.hp-social-photo-tiles {
+		max-width: 60em;
+		margin: 0 auto;
+		
+		.Module__list {
+			display: flex;
+			justify-content: center;
+		}
+		.Module__listItem {
+//			margin: 0 1em;
+			width: 16em;
+		}
+		.Module__link {
+			border: none;
+			display: block;
+			padding: 0.3em;
+
+			&:hover {
+				transform: scale(1.04);
+				z-index: 99;
+			}
+		}
+	}
+
+
+
+
+}
+
+
+
+.u-pageHome.u-folderAdmissions {
+
+
+	.Module__fullWidthFacts {
+		.Module__subList {
+			padding-left: 0;
+		}
+	}
+
+	.u-lContent h2:nth-of-type(1) {
+	    color: inherit;
+	}
+
+	.u-Masthead__subhead {
+		@include varfont-weight;
+		max-width: 28em;
+	}
+	.u-Masthead__siteName--link {
+		padding: 0.15em 0.3em 0.7em 0.3em;
+	}
+	.reqinfo {
+		margin-bottom: 1em;
+		
+		@include medium() {
+			margin-bottom: 0;
+		}
+	}
+	.button--reqinfo {
+		margin-bottom: 0.4em;
+	}
+	.modulesArea {
+	    text-align: center;
+
+		@include medium() {
+			text-align: left;
+		}
+	}
+	
+	.row-title {
+		font-size: 3em;
+		letter-spacing: .03em;
+	}
+}
+
+
+/*	four-grid */
+
+.feature-grid {
+	.Module__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0.2em;
+	}
+	.Module__listItem {
+		padding: 0.2em;
+
+		@include medium() {
+			width: 50%;
+		}
+	}
+	.Module__link {
+//		background: $VC__vassarBurgundy;
+		background: #000;
+		border: none;
+		display: block;
+		position: relative;
+	}
+	.Module__desc {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		align-items: center;
+		justify-content: center;
+		
+		
+		h2 {
+			margin: 0;
+		}
+		p {
+			font-size: 0.8em;
+			
+			@include small() {
+				font-size: 1.06em;
+			}
+		}
+		p, h2 {
+			color: #fff !important;
+			transition: all 0.4s ease;
+		}
+		p {
+			padding: 0px 6%;
+			text-align: center;
+
+			@include small() {
+				padding: 0px 15%;
+			}
+		}
+	}
+	.Module__image img {
+//		box-shadow: 0 0 0 rgba(0,0,0,0.0);
+//		filter: grayscale(100%);
+		margin: 0;
+		opacity: 0.6;
+		position: relative;
+		transition: all 0.4s ease;
+
+	}
+	a:hover {
+		.Module__image img {
+			filter: grayscale(0%);
+			opacity: 1;
+			transform: scale(1.1);
+			z-index: 99;
+//			box-shadow: 0 8px 8px rgba(0,0,0,0.4);
+		}
+		h2 {
+			opacity: 0;
+			transform: translateY(-0.4em);
+		}
+		p {
+			opacity: 0;
+			transform: translateY(0.8em);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

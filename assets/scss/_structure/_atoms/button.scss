@@ -1,0 +1,26 @@
+.button {
+//	margin: 0 !important;
+	margin-top: 0 !important;
+
+//    @extend .trans-04;
+
+	transition: none !important;
+
+
+	&:link {
+	    background: $VC__vassarBurgundy;
+	    font-size: 1.4em;
+	    display: inline-block;
+	    padding: 0.4em 0.6em;
+	    border-radius: 0.4em;
+	    border: none;
+	}
+	&:link,
+	&:visited {
+	    color: #fff !important;
+	    
+	    &:hover {
+		    background: #000;
+	    }
+    }
+}

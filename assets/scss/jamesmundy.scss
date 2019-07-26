@@ -1,0 +1,262 @@
+.u-folderJamesmundy {
+
+	.item-content .Module__desc p:first-child,
+	.item-info
+	{
+	    font-size: 0.86em;
+	    font-weight: bold;
+	    color: #aaa;
+	}
+
+	.intro-row {
+		.figure--image {
+			float: left;
+			margin-right: 2em;
+			width: 100%;
+
+			@include small() {
+				width: 50%;
+			}
+			@include medium() {
+				width: 31%;
+			}
+		}
+	}
+
+	.u-Masthead__subhead {
+		display: none !important;
+	}
+	@media (min-width: 0) and (max-width: $medium) {
+		.u-lHeader {
+		    padding: 53% 0 0 0 !important;
+			background-image: url(/jamesmundy/assets/images/banner.jpg);
+			background-size: contain;
+			background-position: top center;
+		}
+		.u-Masthead__siteName--link {
+		    display: block;
+		    background: none;
+		    margin-left: 0;
+		    padding: 0;
+		    
+		    b {
+				border-bottom: 1px solid #aaa;
+		        display: block;
+		        font-size: 0.6em;
+				padding: 0.3em 0;
+		        text-align: center;
+		        
+		        &:last-child {
+			        border: none;
+		        }
+		    }
+		}
+	}
+
+	@include medium() {
+		.u-lHeader {
+//			background-image: url(/jamesmundy/assets/images/banner.jpg);
+//			background-attachment: fixed;
+			height: calc(100vh - 8em);
+			display: flex;
+			align-items: center;
+			align-items: flex-end;
+			padding: 0 0 3em 0 !important;
+
+		    background: #fff;
+		    background-image: url(/jamesmundy/assets/images/banner.jpg);
+		    background-image: none !important;
+
+		}
+
+		.u-Masthead__siteName {
+			font-size: 5em;
+
+		    b {
+		        text-shadow: 0 0 12px rgba(0,0,0,0.2);
+		        
+		        &.maintitle {
+		            text-shadow: none;
+		        }
+		    }
+		}
+		.u-Masthead__siteName--link {
+			padding: 0;
+			background: none;
+			text-shadow: none;
+
+			.maintitle {
+				color: #444;
+			}
+			b {
+				display: block;
+			}
+		}
+	}
+}
+
+
+.u-folderJamesmundy.show-image {
+	@include medium() {
+
+
+		@keyframes shift {
+		  from { 
+		      opacity: 0;
+		      transform: translateX(-0.4em);
+		  }
+		  to {
+		      opacity: 1;
+		      transform: translateX(0);
+		      
+		  }
+		}
+		.u-Masthead__siteName {
+						animation-name: shift;
+						animation-duration: 4s;    
+		}
+
+
+		@keyframes fade-in {
+		  0% {
+		      transform: scale(1.1);
+		      opacity: 0;
+		  }
+		  100% {
+		      opacity: 1;
+		      transform: scale(1);
+		  }
+		}
+		
+		
+		.u-lHeader {
+		    position: relative;
+		
+		    &:before {
+		        position: absolute;
+		        content: "";
+				background-image: url(/jamesmundy/assets/images/banner.jpg);
+		        width: 100%;
+		        height: 100%;
+		        background-size: cover;
+		        top: 0;
+		        background-attachment: fixed;
+				animation-name: fade-in;
+				animation-duration: 4s;
+		    }
+		}
+	}
+}
+
+
+/*	Gallery		*/
+
+.modulesArea__row.flickity-row {
+	overflow: visible;
+	padding: 0;
+	padding-top: 6em;
+    padding-bottom: 2em !important;
+
+	.item-content {
+		@include medium() {
+			display: flex;
+		}
+		margin: 0 auto;
+		width: calc(100% - 4em);
+		
+		img {
+//			max-height: 100vh;
+		}
+	}
+	.flickity-page-dots {
+		bottom: auto;
+		position: absolute;
+		top: -4em;
+		width: 100%;
+	}
+
+/*
+	.flickity-prev-next-button {
+	    border-radius: 0 !important;
+	    background-image: url(https://preflight2.vassar.edu/jamesmundy/assets/images/1995_13_2.jpg) !important;
+		background-size: 2em !important;
+	    background-repeat: no-repeat !important;
+	    background-attachment: fixed !important;
+	
+	    height: 100% !important;
+	    transform: none !important;
+	    top: 0 !important;
+	
+	    &.previous {
+			left: 0 !important;
+			background-position: left center !important;
+		}
+	    &.next {
+	        right: 0 !important;
+	    background-position: right center !important;
+	
+	    }
+	}
+*/
+  .flickity-button {
+    position: fixed !important;
+    top: 50vh;
+    opacity: 0;
+    transition: opacity ease 0.4s;
+  }
+
+.animation {
+  .flickity-button {
+    opacity: 1;
+  }
+}
+
+    .Module__image {
+	    img {
+		    width: 100%;
+	    }
+	}
+
+/*	.flickity-button-icon {
+	    display: none;
+	} */
+
+	.carousel-cell {
+	    width: 100%;
+	}
+	@include medium() {
+	    .Module__image {
+	        padding-right: 1em;
+	    }
+	    .Module__desc {
+	        padding-left: 1em;
+	    }
+	}
+	
+	.img-horizontal {
+	    .item-content {
+	        max-width: 70em;
+	    }
+		@include medium() {
+		    .Module__image {
+		        width: 60%;
+		    }
+		    .Module__desc {
+		        width: 40%;
+		    }
+		}
+	}
+	.img-vertical {
+	    .item-content {
+	        max-width: 67em;
+	    }
+		@include medium() {	    
+		    .Module__image {
+		        width: 60%;
+		    }
+		    .Module__desc {
+		        width: 40%;
+		    }
+	    }
+	}
+}

@@ -1,0 +1,60 @@
+/*
+
+
+
+*/
+
+.bg-arts {
+	background-image: url(https://www.vassar.edu/arts/assets/images/arts-caad-bg.jpg);
+}
+
+
+
+.background-none {
+	background: none;
+}
+.bg-image-after-vassar {
+	background-image: url(#{$assets-path}after-vassar-photo.jpg);
+}
+.bg-image-library {
+	background-image: url(#{$assets-path}apply-library.jpg);
+}
+.bg-image-tour-library {
+	background-image: url(#{$assets-path}visit-tourInLib.jpg);
+}
+.bg-image-diversity {
+	background-image: url(#{$assets-path}apply_lower.jpg);
+}
+.bg-image-students {
+	background-image: url(#{$assets-path}contact-askstudent-students.jpg);
+}
+.bg-finaid-banner {
+	background-image: url(#{$assets-path}finaid-banner.jpg);
+}
+.bg-image-studentemployment {
+	background-image: url(#{$assets-path}finaid-studentemployment.jpg);
+}
+.bg-image-studentemployment {
+	background-image: url(https://www.vassar.edu/assets/images/campuslife-Post-Office-0709-JA_5268.jpg);
+}
+
+.vassar_plaid {
+    background-size: cover;
+    background: #ebe9e8 url(http://www.vassar.edu/assets/images/about-mission-bg.png) repeat;
+}
+
+.bg-vassarlogo {
+	background: #d4cfce url(/admissions/assets/images/background-patterns/home-section-pattern-vc-white.png) repeat;
+	background-size: 9em;
+}
+
+.bg-argyle {
+	background-color: #fff;
+    background-image: repeating-linear-gradient(120deg, rgba(135,36,67,0.08), rgba(135,36,67,0.08) 2px, transparent 2px, transparent 120px),repeating-linear-gradient(60deg, rgba(135,36,67,0.08), rgba(135,36,67,0.08) 2px, transparent 2px, transparent 120px),linear-gradient(60deg, rgba(66,58,57,0.04) 25%, transparent 25%, transparent 75%, rgba(66,58,57,0.04) 75%, rgba(66,58,57,0.04)),linear-gradient(120deg, rgba(66,58,57,0.04) 25%, transparent 25%, transparent 75%, rgba(66,58,57,0.04) 75%, rgba(66,58,57,0.04));
+    background-size: 140px 240px;
+}
+
+
+
+
+

@@ -1,0 +1,74 @@
+.Module__fullWidthPageNav .Module__title:after {
+	content: "";
+	margin: 0 0.25em 0 0.5em;
+	border-right: 1px solid $VC__vassarTextGray;
+}
+.modulesArea--page-nav {
+	
+}
+.u-NavSite__itemContainer {
+	.icon-facebook {
+		margin-top: 0;
+	}
+	
+	a[class *= 'icon-'] {
+	    text-indent: -9em;
+	    overflow: hidden;	
+	    padding-left: 0.4em;
+		padding-right: 0.4em;
+	
+		svg {
+		    margin-right: 0 !important;
+		}
+		
+		&:hover {
+		    background: #fff !important;
+		    
+		    svg {
+				transform: scale(1.1);
+		    }
+		}
+	}	
+}
+.modulesArea--page-nav {
+	.Module__list {
+	    background: #F0EEEB;        
+	}
+	.Module__fullWidthPageNav .Module__title {
+	    font-variation-settings: 'wght' 600;
+	    font-size: 0.88em;
+	}
+	.Module__listItem {
+	    margin-right: 0.25em;
+	}
+	.Module__fullWidthPageNav .Module__title:after {
+	    margin-left: .5em;
+	}
+}
+.js {
+	.modulesArea--page-nav {
+		
+		position: static;
+		
+		@include medium() {
+		    position: sticky;
+	    }
+	
+		top: 0;
+		z-index: 100;
+		width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.modulesArea__row h2,
+	.row-title {
+		position: relative;
+	}
+	.title-anchor {
+		position: absolute;
+	}
+}
+.Module__fullWidthPageNav {
+     padding: 0 !important;
+}
+

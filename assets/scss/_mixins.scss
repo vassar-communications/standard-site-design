@@ -1,0 +1,212 @@
+@mixin max-width($width) {
+	/*	So who the hell would use padding to define a max-width? Well, good question.
+		
+		I can't use a standard max-width here because the columns (.Module) are contained in what I'm using for the row (.modulesArea__row). Setting a max-width on .modulesArea__row means that the row won't extend all the way across the screen, and in many cases, it'll need to. Hopefully, at some point, we can put columns in an element inside the row; then we can use max-width. Until then, padding has to do the job.
+		
+		This is different than the homepage/2nd-level styling because the structure is different. On the homepage, list modules are used as rows, not columns. That means the two-column layout styling is hardcoded into the module description - it's harder to deal with. On Admissions, I'm using a data definition that allows for rows, and the list modules are the columns.
+	*/
+
+	padding-left: calc((100vw - #{$width}) / 2);
+    padding-right: calc((100vw - #{$width}) / 2);
+}
+
+@mixin small() {
+   @media screen and (min-width: $small) {
+      @content;
+   }
+}
+@mixin medium() {
+    @media screen and (min-width: $medium) {
+        @content;
+    }
+}
+@mixin large() {
+    @media screen and (min-width: $large) {
+        @content;
+    }
+}
+@mixin xlarge() {
+    @media screen and (min-width: $xlarge) {
+        @content;
+    }
+}
+@mixin light-gradient() {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f0eeeb+100&0+0,1+100 */
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%);
+}
+@mixin dark-gradient() {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f0eeeb+100&0+0,1+100 */
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #000 90%, #000 100%);
+}
+
+
+
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	color: $normal;
+	@if $visited {
+		&:visited {
+			color: $visited; } }
+	@if $focus {
+		&:focus {
+			color: $focus; } }
+	@if $hover {
+		&:hover {
+			color: $hover; } }
+	@if $active {
+		&:active {
+			color: $active; } }
+}
+
+@mixin background-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	background: $normal;
+	@if $visited {
+		&:visited {
+			background: $visited; } }
+	@if $focus {
+		&:focus {
+			background: $focus; } }
+	@if $hover {
+		&:hover {
+			background: $hover; } }
+	@if $active {
+		&:active {
+			background: $active; } }
+}
+
+@mixin v-pixel-fallback ( $property, $rems, $keyword: null, $vertical-radius: false, $important: false ) {
+
+	@if $important {
+		$important : ' !important';
+	}
+	@else {
+		$important : '';
+	}
+
+	@if $property == 'border-radius' {
+		@include border-radius(rem-to-pixel($rems));
+		@include border-radius($rems);
+	}
+
+	@elseif $property == 'font-size' {
+
+		@if $keyword {
+			#{$property}: unquote("$keyword#{$important}");
+		}
+		@else {
+			#{$property}: unquote("#{rem-to-pixel($rems, $keyword)}#{$important}");
+		}
+
+		#{$property}: #{$rems}#{$important};
+
+	}
+
+	@else {
+		#{$property}: unquote("#{rem-to-pixel($rems)}#{$important}");
+		#{$property}: #{$rems}#{$important};
+	}
+
+
+}
+
+@function calculate-pixels ( $rems ) {
+
+	@if type-of($rems) != 'number' {
+
+		// If there is more than one value, create a list and perform equations on each value
+
+		// Create an empty list that we can dump values into
+		$values: ();
+
+		@each $value in $rems {
+			$values: append($values, pixels($value) );
+		}
+
+		// Return the property and its list of converted values
+		@return $values;
+
+	}
+	@else {
+		@return pixels($rems);
+	}
+
+}
+
+@function rem-to-pixel ( $rems, $keyword: null ) {
+
+	@if $keyword {
+		@return $keyword
+	}
+	@else {
+		@return calculate-pixels($rems);
+	}
+
+}
+
+@function pixels ( $rems ) {
+
+	$base-font-multiplier : 1;
+	@if type-of($rems) != 'number' {
+		@return $rems;
+	}
+	@else {
+		@if $rems == 0 {
+			@return 0;
+		}
+		@elseif unit($rems) == 'rem' {
+			@return strip-units($rems) * $base-font-multiplier * 16px
+		}
+		@else {
+			@return $rems;
+		}
+	}
+
+}
+
+@function strip-units($number) {
+
+	@if type-of($number) != 'number' {
+		@return $number;
+	}
+	@else {
+		@return $number / ($number * 0 + 1);
+	}
+
+}
+@mixin hidden()
+{
+	display:none !important;
+	visibility:hidden !important;
+}
+
+@mixin visible()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin hidden-undo()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin  ac-hiddenVisually()
+{
+	border:0 !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	padding:0 !important;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px !important;
+}
+
+@mixin ac-hiddenVisually-focus()
+{
+	clip:auto;
+	height:auto !important;
+	overflow:visible;
+	position:static !important;
+	width:auto !important;
+}

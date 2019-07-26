@@ -1,0 +1,199 @@
+.u-lContent {
+	a {
+		color: $VC__vassarBurgundy;
+		&:visited {
+			border-color: $VC__vassarTextGray;
+			color: $VC__vassarGray;
+		}
+		&:hover, &:visited:hover {
+			color: $linkColorHoverFocus;
+		}
+	}
+}
+/*
+.delete-this {
+	&, * {
+		color: #f00 !important;
+	}
+}
+*/
+.bg-stars {
+	background: linear-gradient(324deg, #f8f7f7 4%, transparent 4%) -70px 43px,linear-gradient(36deg, #f8f7f7 4%, transparent 4%) 30px 43px,linear-gradient(72deg, #fff 8.5%, transparent 8.5%) 30px 43px,linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -70px 43px,linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -70px 23px,linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 30px 23px,linear-gradient(324deg, #f8f7f7 4%, transparent 4%) -20px 93px,linear-gradient(36deg, #f8f7f7 4%, transparent 4%) 80px 93px,linear-gradient(72deg, #fff 8.5%, transparent 8.5%) 80px 93px,linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -20px 93px,linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -20px 73px,linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 80px 73px;
+    background-color: #f8f7f7;
+    background-size: 100px 100px;	
+}
+
+.bg-gray {
+	background: #F8F7F6;
+}
+
+.u-NavSite__item:focus,
+.u-NavSite__item:hover,
+.u-NavSite__item--isCurrent,
+.u-NavSite__item--isCurrent:visited {
+//	background: #fff;
+//	border-bottom: 1px solid $VC__vassarBurgundy;
+//	color: $VC__vassarBurgundy;
+/*	
+	&:hover {
+		background: $VC__vassarLightGray;
+		border: none !important;
+	}
+*/
+}
+.button:link:hover, 
+.button:visited:hover {
+    background: $linkColorHoverFocus;
+}
+
+.info-chunk {
+	color: $fontColor;
+}
+
+
+
+/*
+.u-lHeader {
+	.u-folderContact & {
+	    background-image: url(/admissions/assets/images/masthead-5_Campus.jpg);
+	}	
+	.u-folderApply & {
+		background-image: url(/admissions/assets/images/masthead-5_Student-Life.jpg);
+	}
+	.u-folderFinancial-aid & {
+		background-image: url(/admissions/assets/images/masthead-7_Campus.jpg);
+	}
+	.u-folderAfter-vassar & {	
+		background-image: url(/admissions/assets/images/masthead-12_Campus.jpg);
+	}
+	.u-folderClass-profile & {
+		background-image: url(/admissions/assets/images/masthead-15_Student-Life.jpg);
+	}
+	.u-folderVisit-us & {	
+		background-image: url(/admissions/assets/images/masthead-6_Campus.jpg);
+	}
+}
+*/
+
+summary {
+    padding: 0.2em 0.6em;
+}
+details {
+    border: 1px solid $VC__vassarTextGray;
+    border-radius: 0.3em;
+    margin: 0.16em 0;
+
+	&:first-of-type {
+	    margin: 0.18em 0;
+	}    
+    &:hover {
+	    cursor: pointer;
+	    background: $VC__vassarVeryLightGray;
+	    border-color: $VC__vassarGray;
+    }
+}
+
+details[open] {
+	box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+	margin-bottom: 0.4em;
+	padding-bottom: 0.6em;
+	
+	&:hover {
+		cursor: default;
+		background: #fff;
+		border-color: $VC__vassarTextGray;
+	}
+	
+	summary {
+	    background: $VC__vassarBurgundy;
+	    border-top-left-radius: 0.3em;
+	    border-top-right-radius: 0.3em;
+	    color: #fff;
+	    margin: -1px -1px 0 -1px;
+		margin-bottom: 0.6em;
+		
+		&:hover {
+			background: $linkColorHoverFocus;
+			cursor: pointer;
+		}
+	}
+}
+
+.light-text {
+	color: #fff;
+	
+	a {
+		color: #c1b5b0;
+		
+		&:hover,
+		&:visited:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+
+.fade {
+	.Module {
+		z-index: 2;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1em;
+		left: 0;
+		top: 0;
+		padding-top: 70%;
+		z-index: 1;
+
+		@include light-gradient();
+	}	
+}
+
+.fade-light {
+	@extend .fade;
+
+	&:after {
+		@include light-gradient();
+	}	
+}
+.fade-dark {
+	@extend .fade;
+
+	&:after {
+		@include dark-gradient();
+	}	
+}
+.theme-dark,
+.theme-light {
+	position: relative;
+}
+.theme-dark {
+	background-color: #000;
+	
+	@extend .fade-dark;
+	
+	a, a:visited {
+		color: #c1b5b0 !important;
+	}
+	a:hover, a:visited:hover {
+		color: #fff !important;
+	}
+	
+	.Module__desc {
+		background: rgba(0,0,0,0.6);
+		color: #fff;
+	}
+}
+.theme-light {
+	background-color: $VC__vassarLightGray;
+
+	@extend .fade-light;
+		
+	.Module__desc {
+		background: rgba(255,255,255,0.8);
+		color: #000;
+	}
+}

@@ -1,0 +1,45 @@
+.Module--list.profile-list {
+	.Module__link {
+		&:link, &:visited {
+			color: $VC__vassarCharcoal;
+
+			&:hover {
+				color: $VC__vassarCharcoal;
+			}
+		}
+	}
+	.Module__title {
+		@extend .module-content;
+		@extend .bold;
+		letter-spacing: normal;
+		text-align: left;
+		text-transform: none;
+	}
+	.Module__list {
+		@include small() {
+		    display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 0.4em;
+		}
+	}
+	.Module__listItem {
+		background: $VC__vassarVeryLightGray;
+	    margin-left: 0;
+	    padding: 1em;
+	    transition: 0.4s all ease;
+	
+		&:hover {
+			background: darken($VC__vassarVeryLightGray, 10%);
+		}
+	}
+	.Module__desc {
+		ul {
+			@extend .generic-list;
+			
+			li {
+				border-color: #fff;
+				@extend .sansserif-verysmall;
+			}
+		}
+	}
+}

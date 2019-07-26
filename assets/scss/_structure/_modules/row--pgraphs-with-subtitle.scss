@@ -1,0 +1,14 @@
+/*	This, like row--contact-listing, is an imperfect solution. I haven't found a place for it yet. The benefit is that applying it to a row with specific markup - a set of paragraphs with italicized text, or a series of header-paragraph pairs - can apply a particular style to that content without the need for special custom markup. This could be useful for situations where a row contains a list of people, and we want to have that look a certain way without resorting to data definitions or custom markup.
+
+What's tricky is that I don't see rows as modules. Ideally, special content treatments should be handled by modules, not freeform content.
+
+*/
+
+.row--pgraphs-with-subtitle {
+	p {
+		em {
+			color: $VC__vassarGray;
+			font-size: 0.9em;
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.imagegrid {
+	overflow: visible;
+	
+	.Module__list {
+		overflow: visible;
+	}
+	
+	.Module__listItem {
+		margin-bottom: 0.4em;
+		
+		@include medium() {
+			margin-bottom: 0;
+		}
+		.Module__link {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			transition: 0.2s all ease;
+			
+			&:hover {
+				transform: scale(1.04);
+				z-index: 99;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+			}
+		}
+	}
+	.Module__desc {
+		background: rgba(0,0,0,0.6);
+		bottom: 0;
+		color: #fff;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 40;
+		display: block;
+		padding: 0.6em;
+		font-size: 0.8em;
+	}
+	.Module__image {
+		img {
+			margin: 0;
+		}
+	}
+	.Module__link {
+		border: none;
+		display: block;
+		position: relative;
+	}
+}
+
+
+$padding-small: 0.2em;
+
+
+.ModList__grid {
+	.Module__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+
+.ModList__grid-med-2cols {
+	@include medium() {
+		.Module__listItem {
+			width: 50%;
+		}
+	}
+}
+.ModList__grid-large-3cols {
+	@include large() {
+		.Module__listItem {
+			width: 33.33%;
+		}
+		&.padding-small {
+			.Module__listItem {
+				width: calc(33% - (2 * #{$padding-small}));
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

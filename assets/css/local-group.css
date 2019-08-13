@@ -3109,7 +3109,7 @@ tbody td, tbody th {
         -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
                 transform: scale(1.2);
-        z-index: 99; }
+        z-index: 2; }
   .u-pageHome .hp-social-photo-tiles {
     max-width: 60em;
     margin: 0 auto; }
@@ -3132,7 +3132,7 @@ tbody td, tbody th {
         -webkit-transform: scale(1.04);
             -ms-transform: scale(1.04);
                 transform: scale(1.04);
-        z-index: 99; }
+        z-index: 2; }
 
 .u-pageHome.u-folderAdmissions .Module__fullWidthFacts .Module__subList {
   padding-left: 0; }

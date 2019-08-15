@@ -1,0 +1,128 @@
+/* Typography */
+.u-pageTitle {
+    text-align: center;
+}
+.calendar-month {
+    ul {
+        padding-left: 0;
+        li {
+            font-size: .889em;
+            line-height: 1.15;
+        }
+    }
+    td {
+        > a:first-child {
+            font-weight: 700;
+            text-align: center;
+        }
+        > a:last-child {
+            font-size: .889em;
+        }
+    }
+}
+.u-lContent {
+    .calendar-date {
+        font-variation-settings: "wght" 400 !important;
+    }
+}
+
+/* Layout */
+.u-pageHome.u-folderCalendar .u-NavSite__itemContainer:first-child {
+    display: list-item;
+}
+.calendar-nav,
+.calendar-month {
+    width: 95%;
+    margin: 0 auto 1em;
+}
+.view-events {
+    margin: 0 auto 1em 2.5%;
+}
+.calendar-month {
+    border: 1px #bfb9af solid;
+    tr {
+        display: flex;
+    }
+    td, th {
+        flex-basis: 100%;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            padding-bottom: .75em;
+        }
+    }
+    td {
+        > a:first-child {
+            font-weight: 700;
+            display: block;
+            width: 20%;
+            margin: 0 auto;
+        }
+    }
+    td.today {
+        > a:first-child {
+            color: white;
+            background-color: #746661;
+            padding: .2em .4em;
+            border-radius: .85em;
+        }
+    }
+}
+.u-lContent {
+    .calendar-date {
+        margin-bottom: 2em;
+    }
+    h4.calendar-date:first-child {
+            margin-top: 2em;
+    }
+    .calendar-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1em;
+        h5 {
+            margin: .2em 0 0;
+            flex-basis: 85%;
+            margin-left: auto;
+        }
+        li {
+            padding-bottom: .75em;
+        }
+    }
+}
+.calendar-time {
+    flex-basis: 15%;
+}
+.calendar-location {
+    flex-basis: 85%;
+    margin-left: auto;
+    line-height: 1;
+}
+@media (min-width: $small) {
+    .u-lContent {
+        .calendar-list {
+            a {
+                display: flex;
+                flex-flow: wrap;
+            }
+        }
+    }
+}
+
+/* Color */
+.calendar-month {
+    a {
+        border-bottom: 1px solid transparent;
+    }
+    td {
+        border: 1px solid rgba(191, 185, 175, 0.3);
+    }
+}
+.u-lContent {
+    .calendar-list {
+        a {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}

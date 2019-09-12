@@ -46,6 +46,11 @@
 }
 
 /* Layout */
+.u-pageHome.u-folderCalendar .u-pageTitle {
+    display: inherit;
+    visibility: visible;
+    color: $VC__vassarGray !important;
+}
 .u-pageHome.u-folderCalendar .u-NavSite__itemContainer:first-child {
     display: list-item;
 }
@@ -161,7 +166,7 @@
 }   
 td.today {
     > a:first-child {
-        background-color: #746661;
+        background-color: $VC__vassarGray;
     }
 }
 

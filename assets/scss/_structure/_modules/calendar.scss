@@ -1,0 +1,203 @@
+/* Typography */
+.u-pageTitle {
+    text-align: center;
+}
+.calendar-month-day {
+    justify-content: center;
+}
+.calendar-month {
+    ul {
+        padding-left: 0;
+        li {
+            font-size: .889em;
+            line-height: 1.15;
+        }
+    }
+    td {
+        > a:first-child {
+            font-weight: 700;
+            text-align: center;
+        }
+        > a:last-child {
+            font-size: .889em;
+        }
+    }
+}
+.u-lContent {
+    .calendar-date {
+        font-variation-settings: "wght" 400 !important;
+    }
+}
+.calendar-nav {
+    text-align: center;
+    .button:link {
+        font-size: 1em;
+    }
+}
+.small-btn.view-events {
+    font-size: 1em;
+}
+.calendar-event-info {
+    .calendar-event-label,
+    strong {
+        font-weight: inherit !important;
+        font-variation-settings: 'wght' $fontWeightBold !important;
+    }
+}
+
+/* Layout */
+.u-pageHome.u-folderCalendar .u-pageTitle {
+    display: inherit;
+    visibility: visible;
+    color: $VC__vassarGray !important;
+}
+.u-pageHome.u-folderCalendar .u-NavSite__itemContainer:first-child {
+    display: list-item;
+}
+.calendar-nav,
+.calendar-month {
+    width: 95%;
+    margin: 0 auto .5em;
+}
+.calendar-month {
+    margin-bottom: 1em;
+}
+.calendar-nav {
+    margin: 2em auto .5em;
+    .button {
+        margin-bottom: .5em;
+    }
+    .button:link,
+    .small-btn.view-events {
+        margin-right: .25em;
+    }
+}
+.button.view-events {
+    margin: 0 .25em 0 2.5%;
+}
+.calendar-month {
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+    td, th {
+        flex-basis: 100%;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            padding-bottom: .75em;
+        }
+    }
+    td {
+        > a:first-child {
+            font-weight: 700;
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    td.today {
+        > a:first-child {
+            color: white;
+            padding: .2em .4em;
+            border-radius: .25em;
+        }
+    }
+}
+.u-lContent {
+    .calendar-date {
+        margin-bottom: 2em;
+    }
+    h4.calendar-date:first-child {
+            margin-top: 2em;
+    }
+    .calendar-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1em;
+        h5 {
+            margin: .2em 0 0;
+            flex-basis: 85%;
+            margin-left: auto;
+        }
+        li {
+            padding-bottom: .75em;
+        }
+    }
+}
+.calendar-time {
+    flex-basis: 15%;
+}
+.calendar-location {
+    flex-basis: 85%;
+    margin-left: auto;
+    line-height: 1;
+}
+.calendar-month-day,
+.calendar-month .empty {
+    display: none;
+}
+
+/* Color */
+.calendar-month {
+    border: 1px #bfb9af solid;
+    a {
+        border-bottom: 1px solid transparent;
+    }
+    td {
+        border: 1px solid rgba(191, 185, 175, 0.3);
+    }
+    tr:nth-child(odd),
+    tr:nth-child(even) {
+        background: transparent;
+    }
+}
+.u-lContent {
+    .calendar-list {
+        a {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+.calendar-month {
+
+}   
+td.today {
+    > a:first-child {
+        background-color: $VC__vassarGray;
+    }
+}
+
+@media (min-width: 59.375em) {
+    .calendar-month-day,
+    .calendar-month .empty {
+        display: inherit;
+    }
+    .day--desc {
+        display: none;
+    }
+    .calendar-month {
+        tr {
+            flex-direction: inherit;
+        }
+    }
+    .u-lContent {
+        .calendar-list {
+            a {
+                display: flex;
+                flex-flow: wrap;
+            }
+        }
+    }
+    
+    .calendar-month {
+        tr:nth-child(even) {
+            background: transparent;
+        }
+        tr:nth-child(odd) {
+            background: #f8f7f6;
+        }
+    }    
+}

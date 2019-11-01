@@ -53,11 +53,16 @@ I would like page-specific banner images to be defined in the CMS, when editing 
 	@include header('.u-folderClass-profile', 'masthead-15_Student-Life.jpg');
 	@include header('.u-folderVisit-us', 'masthead-6_Campus.jpg');
 
-	@include local-header('.u-folderOpenhouse', '0110_15_10_TT_6291_edit.jpg');
+//	@include local-header('.u-folderOpenhouse', '0110_15_10_TT_6291_edit.jpg');
+	@include local-header('.u-folderDiscovervassar', '0110_15_10_TT_6291_edit.jpg');
+	
 	@include local-header('.u-folderCampus', '0019_12_04_TT_0796.jpg');
 	@include local-header('.u-folderClassvisits', '0098_15_09_KR_0019.jpg');
 	@include local-header('.u-folderOvernight', '0032_15_04_JA_655.jpg');
-	@include local-header('.u-folderGroup-tours', '0152_13_10_-KF_0321.jpg');
+
+//	@include local-header('.u-folderGroup-tours', '0152_13_10_-KF_0321.jpg');
+	@include local-header('.u-folderGroup-tours', '0031_13_03_BL_8722.jpg');
+
 	@include local-header('.u-folderTour', '0162_14_11_TT_2356.jpg');
 
 	@include local-header('.u-folderForms', '0074_16_07_KR_0048.jpg');

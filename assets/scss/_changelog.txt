@@ -1,0 +1,68 @@
+*** Changelog ***
+
+Dec 1, 2020 - v 1.0.0
+===========
+
+For all sites that use this repo:
+
+* Added "additional-styling" file. This contains a lot of CSS that was in the CMS but not in the main repo. Given that we'll be retiring the current Admissions repo soon, I think it's faster and easier to add anything we need to the additional-styling file.
+
+
+On Admissions:
+
+* Identified what was in CMS local-group.css file but not in the repo, and added that to additional-styling.scss
+* Added styling for Viewbook image in sidenav (this appears on the Apply page).
+
+
+On New Students:
+
+
+
+
+
+About this approach
+===================
+
+Right now, we have a situation where several sites - Admissions, New Students, Tensegrity, and Congrats - are using this one repo. However, not all sites have the latest version of the repo, and all sites have CSS in the CMS that is not in the latest version of the repo. I'm trying to figure out what state each site's local CSS is in, and how that compares to what's in the repo.
+
+I'm doing the following to make that process a lot easier:
+
+- I'm assigning a version number to each repo change. That version number goes at the top of local-group.scss, so it's immediately clear whether the site's local CSS is up to date.
+
+- I'm also detailing the changes associated with that version number in this log. That will make it easier to see what actually changed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

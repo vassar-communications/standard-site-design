@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*
+	Version: 1.0.0
+	Updated: Dec 1, 2020
+
+*/
 /*	CONFIG
 	====== */
 /*	TYPOGRAPHY
@@ -121,8 +126,8 @@ $u-NewsList__item--padding: 0; */
 This is only needed because right now, this styling is built on blocks of CSS originally written by Jeff and Ray. Once all the styling is merged into one system, _overrides won't be necessary.
 	
 */
-.u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1, .u-pageInner
-.u-lContent h1,
+.u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1,
+.u-pageInner .u-lContent h1,
 .u-lContent .u-pageInner h1 {
   display: block;
   visibility: visible; }
@@ -144,7 +149,8 @@ This is only needed because right now, this styling is built on blocks of CSS or
 @media screen {
   .u-lMain {
     float: right; }
-  .u-lMain, .u-thirdLevel .u-lMain {
+  .u-lMain,
+  .u-thirdLevel .u-lMain {
     margin-top: 18em; }
   .u-NavSite {
     display: block;
@@ -154,26 +160,21 @@ This is only needed because right now, this styling is built on blocks of CSS or
     width: 100%; }
   .u-NavSite__level {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
   .u-NavSite__item {
     font-size: 1.2em;
     font-weight: normal;
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     line-height: 1;
@@ -208,11 +209,9 @@ This is only needed because right now, this styling is built on blocks of CSS or
   .u-NavSite__level {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
   .u-NavSite__level--1 .u-NavSite__item {
@@ -237,19 +236,23 @@ This is only needed because right now, this styling is built on blocks of CSS or
     white-space: nowrap; } }
 
 @media screen and (min-width: 15em) {
-  .u-lMain, .u-thirdLevel .u-lMain {
+  .u-lMain,
+  .u-thirdLevel .u-lMain {
     margin-top: 12em; } }
 
 @media screen and (min-width: 26em) {
-  .u-lMain, .u-thirdLevel .u-lMain {
+  .u-lMain,
+  .u-thirdLevel .u-lMain {
     margin-top: 8em; } }
 
 @media screen and (min-width: 37.5em) {
-  .u-lMain, .u-thirdLevel .u-lMain {
+  .u-lMain,
+  .u-thirdLevel .u-lMain {
     margin-top: 6em; } }
 
 @media screen and (min-width: 56.25em) {
-  .u-lMain, .u-thirdLevel .u-lMain {
+  .u-lMain,
+  .u-thirdLevel .u-lMain {
     margin-top: 4em; } }
 
 .Module__fullWidthFacts .Module__list {
@@ -279,15 +282,12 @@ This is only needed because right now, this styling is built on blocks of CSS or
 @media screen {
   .Module__fullWidthFacts .Module__subList {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .Module__fullWidthFacts .Module__subList .Module__listItem {
       -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
           -ms-flex-positive: 1;
               flex-grow: 1;
       padding: 0 2%; }
@@ -303,8 +303,7 @@ This is only needed because right now, this styling is built on blocks of CSS or
 
 .u-lHeader {
   background: #666 url(../../../assets/images/academics-header-bg.jpg) no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-size: cover; }
 
 .Module__fullWidthFacts .Module__desc .moreLink, .Module__fullWidthFacts .Module__desc .moreLink:visited {
   color: #882344;
@@ -320,11 +319,9 @@ This is only needed because right now, this styling is built on blocks of CSS or
 
 .buttonContainer {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1em 0; }
@@ -404,7 +401,6 @@ img {
   @media screen and (min-width: 56.25em) {
     .row-title {
       padding: 0; } }
-
 .Module__fullWidthMargins.Module__fullWidthPageNav {
   border: none;
   padding: 0; }
@@ -482,16 +478,13 @@ main {
     .Module--halfWidth {
       margin: 0 4%;
       margin: 0; } }
-
 @media (min-width: 56.25em) {
   .modulesArea__row--twocols {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding-left: calc((100vw - 60em) / 2);
     padding-right: calc((100vw - 60em) / 2); }
   .Module__fullWidth.Module--halfWidth {
@@ -510,7 +503,6 @@ main {
   @media (min-width: 56.25em) {
     .Module__fullWidthBleed .Module__list {
       margin: 4% auto; } }
-
 .u-NavSite__level--2 {
   display: none; }
 
@@ -537,15 +529,12 @@ main {
   @media (min-width: 56.25em) {
     .two-cols--inner {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; }
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
       .two-cols--inner .col-inner {
         width: 50%; } }
-
 .modulesArea__row > h2 {
   margin-bottom: 0.4em;
   margin-top: 0; }
@@ -559,7 +548,6 @@ main {
     .u-pageTitle, .Module__desc h1,
     .u-lContent h1 {
       text-align: left; } }
-
 /*
 .u-pageTitle + .modulesArea {
 	//	There's too much space between the page title and the first row. This adjusts it.
@@ -577,39 +565,33 @@ main {
 */
 .PageContentInner {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
 
 .u-lHeader {
   -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1; }
 
 .u-NavSite {
   margin-bottom: 2em;
   -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
   position: static; }
 
 .u-lMain {
   -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
       -ms-flex-order: 3;
           order: 3;
   margin-top: 0 !important; }
 
 .u-lFooter {
   -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
       -ms-flex-order: 4;
           order: 4; }
 
@@ -652,12 +634,12 @@ sub, sup {
         font-family: "SourceSansVar";
         font-variation-settings: "wght" 380; } }
 
-.module-content, .Module--list.content-list .Module__title, .Module--list.profile-list .Module__title {
+.module-content, .Module--list.profile-list .Module__title, .Module--list.content-list .Module__title {
   font-family: "source-sans-pro";
   font-weight: 400;
   font-size: 1em; }
   @supports (font-variation-settings: "wght" 360) {
-    .module-content, .Module--list.content-list .Module__title, .Module--list.profile-list .Module__title {
+    .module-content, .Module--list.profile-list .Module__title, .Module--list.content-list .Module__title {
       font-family: "SourceSansVar";
       font-variation-settings: "wght" 360; } }
 
@@ -681,15 +663,15 @@ sub, sup {
       font-family: "SourceSansVar";
       font-variation-settings: "wght" 360; } }
 
-.bold, .Module__desc h4,
-.u-lContent h4, th, .module-title, .Module--list.content-list .Module__header, .u-pageHome .announcements h3, .back-link__container a, .Module--list.profile-list .Module__title, .u-pageHome .class-profile-link .Module__desc, .bold a, .Module__desc h4 a,
-.u-lContent h4 a, th a, .module-title a, .Module--list.content-list .Module__header a, .u-pageHome .announcements h3 a, .back-link__container a a, .Module--list.profile-list .Module__title a, .u-pageHome .class-profile-link .Module__desc a, strong, strong a {
+.bold, .u-pageHome .class-profile-link .Module__desc, .Module--list.profile-list .Module__title, .back-link__container a, .module-title, .u-pageHome .announcements h3, .Module--list.content-list .Module__header, th, .Module__desc h4,
+.u-lContent h4, .bold a, .u-pageHome .class-profile-link .Module__desc a, .Module--list.profile-list .Module__title a, .module-title a, .u-pageHome .announcements h3 a, .Module--list.content-list .Module__header a, th a, .Module__desc h4 a,
+.u-lContent h4 a, strong, strong a {
   font-family: "source-sans-pro";
   font-weight: bold !important; }
   @supports (font-variation-settings: "wght" 500) {
-    .bold, .Module__desc h4,
-    .u-lContent h4, th, .module-title, .Module--list.content-list .Module__header, .u-pageHome .announcements h3, .back-link__container a, .Module--list.profile-list .Module__title, .u-pageHome .class-profile-link .Module__desc, .bold a, .Module__desc h4 a,
-    .u-lContent h4 a, th a, .module-title a, .Module--list.content-list .Module__header a, .u-pageHome .announcements h3 a, .back-link__container a a, .Module--list.profile-list .Module__title a, .u-pageHome .class-profile-link .Module__desc a, strong, strong a {
+    .bold, .u-pageHome .class-profile-link .Module__desc, .Module--list.profile-list .Module__title, .back-link__container a, .module-title, .u-pageHome .announcements h3, .Module--list.content-list .Module__header, th, .Module__desc h4,
+    .u-lContent h4, .bold a, .u-pageHome .class-profile-link .Module__desc a, .Module--list.profile-list .Module__title a, .module-title a, .u-pageHome .announcements h3 a, .Module--list.content-list .Module__header a, th a, .Module__desc h4 a,
+    .u-lContent h4 a, strong, strong a {
       font-family: "SourceSansVar";
       font-variation-settings: 'wght' 500 !important; } }
 
@@ -752,7 +734,6 @@ p.caption,
     .u-pageTitle, .Module__desc h1,
     .u-lContent h1 {
       font-size: 5em; } }
-
 .Module__desc,
 .u-lContent {
   /*	ol {
@@ -831,7 +812,6 @@ p.caption,
       .Module__desc .intro,
       .u-lContent .intro {
         font-size: 1.6em; } }
-
 .faq__container {
   padding: 2em !important;
   background: #f8f7f6; }
@@ -851,7 +831,7 @@ p.caption,
       font-family: "SourceSansVar";
       font-variation-settings: "wght" 360; } }
 
-.module-title, .Module--list.content-list .Module__header, .u-pageHome .announcements h3 {
+.module-title, .u-pageHome .announcements h3, .Module--list.content-list .Module__header {
   font-size: 1em;
   text-transform: uppercase; }
 
@@ -871,12 +851,10 @@ p.caption,
 }
 */
 .bg-stars {
-  background: -webkit-linear-gradient(126deg, #f8f7f7 4%, transparent 4%) -70px 43px, -webkit-linear-gradient(54deg, #f8f7f7 4%, transparent 4%) 30px 43px, -webkit-linear-gradient(18deg, #fff 8.5%, transparent 8.5%) 30px 43px, -webkit-linear-gradient(162deg, #fff 8.5%, transparent 8.5%) -70px 43px, -webkit-linear-gradient(234deg, #fff 7.5%, transparent 7.5%) -70px 23px, -webkit-linear-gradient(306deg, #fff 7.5%, transparent 7.5%) 30px 23px, -webkit-linear-gradient(126deg, #f8f7f7 4%, transparent 4%) -20px 93px, -webkit-linear-gradient(54deg, #f8f7f7 4%, transparent 4%) 80px 93px, -webkit-linear-gradient(18deg, #fff 8.5%, transparent 8.5%) 80px 93px, -webkit-linear-gradient(162deg, #fff 8.5%, transparent 8.5%) -20px 93px, -webkit-linear-gradient(234deg, #fff 7.5%, transparent 7.5%) -20px 73px, -webkit-linear-gradient(306deg, #fff 7.5%, transparent 7.5%) 80px 73px;
   background: -o-linear-gradient(126deg, #f8f7f7 4%, transparent 4%) -70px 43px, -o-linear-gradient(54deg, #f8f7f7 4%, transparent 4%) 30px 43px, -o-linear-gradient(18deg, #fff 8.5%, transparent 8.5%) 30px 43px, -o-linear-gradient(162deg, #fff 8.5%, transparent 8.5%) -70px 43px, -o-linear-gradient(234deg, #fff 7.5%, transparent 7.5%) -70px 23px, -o-linear-gradient(306deg, #fff 7.5%, transparent 7.5%) 30px 23px, -o-linear-gradient(126deg, #f8f7f7 4%, transparent 4%) -20px 93px, -o-linear-gradient(54deg, #f8f7f7 4%, transparent 4%) 80px 93px, -o-linear-gradient(18deg, #fff 8.5%, transparent 8.5%) 80px 93px, -o-linear-gradient(162deg, #fff 8.5%, transparent 8.5%) -20px 93px, -o-linear-gradient(234deg, #fff 7.5%, transparent 7.5%) -20px 73px, -o-linear-gradient(306deg, #fff 7.5%, transparent 7.5%) 80px 73px;
   background: linear-gradient(324deg, #f8f7f7 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #f8f7f7 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #fff 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #f8f7f7 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #f8f7f7 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #fff 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #fff 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #fff 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #fff 7.5%, transparent 7.5%) 80px 73px;
   background-color: #f8f7f7;
-  -webkit-background-size: 100px 100px;
-          background-size: 100px 100px; }
+  background-size: 100px 100px; }
 
 .bg-gray {
   background: #F8F7F6; }
@@ -959,13 +937,13 @@ details[open] {
   color: #fff; }
   .light-text a, .imagestyle-textoverlay a {
     color: #c1b5b0; }
-    .light-text a:hover, .imagestyle-textoverlay a:hover, .light-text a:visited:hover, .imagestyle-textoverlay a:visited:hover {
+    .light-text a:hover, .imagestyle-textoverlay a:hover, .light-text a:visited:hover {
       color: #fff; }
 
-.fade .Module, .fade-light .Module, .theme-light .Module, .fade-dark .Module, .theme-dark .Module {
+.fade .Module, .fade-dark .Module, .theme-dark .Module, .fade-light .Module, .theme-light .Module {
   z-index: 2; }
 
-.fade:after, .fade-light:after, .theme-light:after, .fade-dark:after, .theme-dark:after {
+.fade:after, .fade-dark:after, .theme-dark:after, .fade-light:after, .theme-light:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -976,21 +954,18 @@ details[open] {
   z-index: 1;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f0eeeb+100&0+0,1+100 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0)), color-stop(90%, #f0eeeb), to(#f0eeeb));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%);
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%); }
 
 .fade-light:after, .theme-light:after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f0eeeb+100&0+0,1+100 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0)), color-stop(90%, #f0eeeb), to(#f0eeeb));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%);
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #f0eeeb 90%, #f0eeeb 100%); }
 
 .fade-dark:after, .theme-dark:after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f0eeeb+100&0+0,1+100 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0)), color-stop(90%, #000), to(#000));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #000 90%, #000 100%);
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #000 90%, #000 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, #000 90%, #000 100%); }
 
@@ -1016,16 +991,6 @@ details[open] {
 
 .no-border, .no-border-on-children *, .no-border:hover, .no-border-on-children :hover, .no-border:visited, .no-border-on-children :visited {
   border: none; }
-
-@-webkit-keyframes fade-shift-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(1em);
-            transform: translateY(1em); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
 
 @keyframes fade-shift-in {
   0% {
@@ -1202,22 +1167,18 @@ table {
   background-image: url(https://www.vassar.edu/assets/images/campuslife-Post-Office-0709-JA_5268.jpg); }
 
 .vassar_plaid {
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background: #ebe9e8 url(http://www.vassar.edu/assets/images/about-mission-bg.png) repeat; }
 
 .bg-vassarlogo {
   background: #d4cfce url(/admissions/assets/images/background-patterns/home-section-pattern-vc-white.png) repeat;
-  -webkit-background-size: 9em 9em;
-          background-size: 9em; }
+  background-size: 9em; }
 
 .bg-argyle {
   background-color: #fff;
-  background-image: -webkit-repeating-linear-gradient(330deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), -webkit-repeating-linear-gradient(30deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), -webkit-linear-gradient(30deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04)), -webkit-linear-gradient(330deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04));
   background-image: -o-repeating-linear-gradient(330deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), -o-repeating-linear-gradient(30deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), -o-linear-gradient(30deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04)), -o-linear-gradient(330deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04));
   background-image: repeating-linear-gradient(120deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), repeating-linear-gradient(60deg, rgba(135, 36, 67, 0.08), rgba(135, 36, 67, 0.08) 2px, transparent 2px, transparent 120px), linear-gradient(60deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04)), linear-gradient(120deg, rgba(66, 58, 57, 0.04) 25%, transparent 25%, transparent 75%, rgba(66, 58, 57, 0.04) 75%, rgba(66, 58, 57, 0.04));
-  -webkit-background-size: 140px 240px;
-          background-size: 140px 240px; }
+  background-size: 140px 240px; }
 
 @media screen and (min-width: 37.5em) {
   .content-cols-3 .Module--mainContent {
@@ -1472,7 +1433,7 @@ table {
 
 /*	Alignment
 	========= */
-.align-center, .Module__fullWidthPageNav, .faq__item {
+.align-center, .faq__item, .Module__fullWidthPageNav {
   margin-left: auto;
   margin-right: auto; }
 
@@ -1498,7 +1459,6 @@ table {
   @media (min-width: 56.25em) {
     .width-third {
       width: 33%; } }
-
 /*
 	- For rows without an attached image, I have to use padding to set max-width.
 	- For rows with an attached image, I can use max-width itself, since both the image and the content are contained in a list. 
@@ -1562,8 +1522,7 @@ table {
     border: none; }
   .button:link, .button:visited {
     color: #fff !important; }
-    .button:link:hover,
-    .button:visited:hover {
+    .button:link:hover, .button:visited:hover {
       background: #000; }
 
 .u-lContent hr {
@@ -1650,7 +1609,6 @@ div.grid[class^='grid-md-'] {
 @media (min-width: 37.5em) {
   .grid-twocols-sm, .grid-sm-twocols {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     .grid-twocols-sm > .grid-col, .grid-sm-twocols > .grid-col {
@@ -1659,7 +1617,6 @@ div.grid[class^='grid-md-'] {
 @media (min-width: 56.25em) {
   .grid-twocols-md, .grid-md-twocols {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     .grid-twocols-md > .grid-col, .grid-md-twocols > .grid-col {
@@ -1668,7 +1625,6 @@ div.grid[class^='grid-md-'] {
 @media (min-width: 62.5em) {
   .grid-twocols-lg, .grid-lg-twocols {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     .grid-twocols-lg > .grid-col, .grid-lg-twocols > .grid-col {
@@ -1697,7 +1653,6 @@ div.grid[class^='grid-md-'] {
   @media (max-width: 56.25em) {
     .modulesArea__row:first-child {
       padding-top: 0; } }
-
 /*	Adjustments
 	=========== */
 .modulesArea__row--onecol {
@@ -1709,16 +1664,13 @@ div.grid[class^='grid-md-'] {
     .modulesArea__row--onecol {
       padding-left: calc((100vw - 48em) / 2);
       padding-right: calc((100vw - 48em) / 2); } }
-
 @media screen and (min-width: 56.25em) {
   .modulesArea__row--twocols {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 @media screen and (min-width: 56.25em) {
   .modulesArea__row--twocols .Module {
@@ -1740,8 +1692,7 @@ div.grid[class^='grid-md-'] {
     width: 100%; }
 
 .imagestyle-textoverlay {
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   padding-top: 4em;
   padding-bottom: 4em;
   position: relative;
@@ -1760,8 +1711,7 @@ div.grid[class^='grid-md-'] {
     z-index: 10; }
 
 .imagestyle-feature {
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   padding-top: 40%; }
@@ -1799,25 +1749,21 @@ div.grid[class^='grid-md-'] {
     overflow: visible; }
   .image-attached .Module__listItem {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse; }
     @media (min-width: 56.25em) {
       .image-attached .Module__listItem {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
             -ms-flex-direction: row;
                 flex-direction: row; } }
   @media (min-width: 56.25em) {
     .image-attached .Module__desc {
       -webkit-box-ordinal-group: 2;
-      -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
       width: 50%;
@@ -1825,7 +1771,6 @@ div.grid[class^='grid-md-'] {
   @media (min-width: 56.25em) {
     .image-attached .Module__image {
       -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
           -ms-flex-order: 2;
               order: 2;
       width: 50%; }
@@ -1834,7 +1779,6 @@ div.grid[class^='grid-md-'] {
         position: absolute;
         top: 0;
         width: calc(24em + ((100vw - 48em)/2)); } }
-
 .imagestyle-sidecolumn {
   /*	Deprecate this in favor of a more generic solution. So there won't be an "imagestyle" class any more (although keep this for now because Congrats and Admissions use it). Stop using this class and remove it from the documentation.
 	
@@ -1855,7 +1799,6 @@ div.grid[class^='grid-md-'] {
   @media screen and (min-width: 56.25em) {
     .imagestyle-sidecolumn .Module__listItem {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
   @media screen and (min-width: 56.25em) {
@@ -1872,22 +1815,18 @@ div.grid[class^='grid-md-'] {
     .imagestyle-sidecolumn.sidecolumn--image-right .Module__listItem {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
-      -webkit-flex-direction: row-reverse;
           -ms-flex-direction: row-reverse;
               flex-direction: row-reverse; } }
   @media screen and (min-width: 56.25em) {
     .imagestyle-sidecolumn.sidecolumn--image-right .Module__desc {
       padding-right: 2em; } }
-
 .imagestyle-contentontop .Module__listItem,
 .imagestyle-contentontop .Module__link {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-  -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
 
@@ -2035,7 +1974,6 @@ aside {
   @media screen and (min-width: 37.5em) {
     .button-row {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
   .button-row li {
@@ -2062,6 +2000,176 @@ aside {
   display: block;
   padding: 0.3em 0; }
 
+/* Typography */
+.u-pageTitle, .Module__desc h1,
+.u-lContent h1 {
+  text-align: center; }
+
+.calendar-month-day {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.calendar-month ul {
+  padding-left: 0; }
+  .calendar-month ul li {
+    font-size: .889em;
+    line-height: 1.15; }
+
+.calendar-month td > a:first-child {
+  font-weight: 700;
+  text-align: center; }
+
+.calendar-month td > a:last-child {
+  font-size: .889em; }
+
+.u-lContent .calendar-date {
+  font-variation-settings: "wght" 400 !important; }
+
+.calendar-nav {
+  text-align: center; }
+  .calendar-nav .button:link {
+    font-size: 1em; }
+
+.small-btn.view-events {
+  font-size: 1em; }
+
+.calendar-event-info .calendar-event-label,
+.calendar-event-info strong {
+  font-weight: inherit !important;
+  font-variation-settings: "wght" 600 !important; }
+
+/* Layout */
+.u-pageHome.u-folderCalendar .u-pageTitle, .u-pageHome.u-folderCalendar .Module__desc h1, .Module__desc .u-pageHome.u-folderCalendar h1,
+.u-pageHome.u-folderCalendar .u-lContent h1,
+.u-lContent .u-pageHome.u-folderCalendar h1 {
+  display: inherit;
+  visibility: visible;
+  color: #746661 !important; }
+
+.u-pageHome.u-folderCalendar .u-NavSite__itemContainer:first-child {
+  display: list-item; }
+
+.calendar-nav,
+.calendar-month {
+  width: 95%;
+  margin: 0 auto .5em; }
+
+.calendar-month {
+  margin-bottom: 1em; }
+
+.calendar-nav {
+  margin: 2em auto .5em; }
+  .calendar-nav .button {
+    margin-bottom: .5em; }
+  .calendar-nav .button:link,
+  .calendar-nav .small-btn.view-events {
+    margin-right: .25em; }
+
+.button.view-events {
+  margin: 0 .25em 0 2.5%; }
+
+.calendar-month tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.calendar-month td, .calendar-month th {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+
+.calendar-month ul {
+  padding-left: 0; }
+  .calendar-month ul li {
+    list-style-type: none;
+    padding-bottom: .75em; }
+
+.calendar-month td > a:first-child {
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+
+.calendar-month td.today > a:first-child {
+  color: white;
+  padding: .2em .4em;
+  border-radius: .25em; }
+
+.u-lContent .calendar-date {
+  margin-bottom: 2em; }
+
+.u-lContent h4.calendar-date:first-child {
+  margin-top: 2em; }
+
+.u-lContent .calendar-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em; }
+  .u-lContent .calendar-list h5 {
+    margin: .2em 0 0;
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+    margin-left: auto; }
+  .u-lContent .calendar-list li {
+    padding-bottom: .75em; }
+
+.calendar-time {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%; }
+
+.calendar-location {
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  margin-left: auto;
+  line-height: 1; }
+
+.calendar-month-day,
+.calendar-month .empty {
+  display: none; }
+
+/* Color */
+.calendar-month {
+  border: 1px #bfb9af solid; }
+  .calendar-month a {
+    border-bottom: 1px solid transparent; }
+  .calendar-month td {
+    border: 1px solid rgba(191, 185, 175, 0.3); }
+  .calendar-month tr:nth-child(odd),
+  .calendar-month tr:nth-child(even) {
+    background: transparent; }
+
+.u-lContent .calendar-list a {
+  border-bottom: 1px solid transparent; }
+
+td.today > a:first-child {
+  background-color: #746661; }
+
+@media (min-width: 59.375em) {
+  .calendar-month-day,
+  .calendar-month .empty {
+    display: inherit; }
+  .day--desc {
+    display: none; }
+  .calendar-month tr {
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit; }
+  .u-lContent .calendar-list a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap; }
+  .calendar-month tr:nth-child(even) {
+    background: transparent; }
+  .calendar-month tr:nth-child(odd) {
+    background: #f8f7f6; } }
+
 .fact-spread {
   opacity: 0;
   -webkit-transition: all ease 0.4s;
@@ -2081,13 +2189,10 @@ aside {
   @media (min-width: 56.25em) {
     .fact-spread ul {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; } }
-
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 .fact-spread li {
   list-style: none;
   color: #fff;
@@ -2097,7 +2202,6 @@ aside {
   @media (min-width: 37.5em) {
     .fact-spread li {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
   @media (min-width: 62.5em) {
@@ -2222,10 +2326,10 @@ figcaption {
   letter-spacing: .1em; }
   @media screen and (min-width: 37.5em) {
     .galleria-info-title {
-      font: normal 200 2em/1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important; } }
+      font: normal 200 2em / 1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important; } }
   @media screen and (min-width: 56.25em) {
     .galleria-info-title {
-      font: normal 200 3em/1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important; } }
+      font: normal 200 3em / 1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important; } }
   .galleria-info-title:after {
     content: ":";
     margin: 0 .25em 0 0; }
@@ -2326,17 +2430,17 @@ figcaption {
     text-align: center; }
   .galleria-button-link,
   .button-link {
-    font: normal 200 1.5em/1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important;
+    font: normal 200 1.5em / 1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important;
     text-transform: uppercase;
     letter-spacing: .03em;
     padding: 0 .25em .19em; }
   .button-link {
-    font: normal 200 1.5em/1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important;
+    font: normal 200 1.5em / 1 "acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed" !important;
     padding: 0 .5em .19em; }
   .galleria-info-description,
   .galleria-counter,
   .galleria-link {
-    font: normal 200 1em/1.2 SourceSansVar, "acumin-pro", "Arial", "Helvetica" !important; }
+    font: normal 200 1em / 1.2 SourceSansVar, "acumin-pro", "Arial", "Helvetica" !important; }
   .galleria-link {
     padding: 0;
     text-transform: none; }
@@ -2446,12 +2550,10 @@ figcaption {
 
 .ModList__grid .Module__list {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 @media screen and (min-width: 56.25em) {
   .ModList__grid-med-2cols .Module__listItem {
@@ -2498,8 +2600,7 @@ html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
 .u-pageInner .u-NavSite__level--1 {
   position: relative; }
   .u-pageInner .u-NavSite__level--1 .u-NavSite__item--hasSubNav.u-NavSite__item--isOpen,
-  .u-pageInner .u-NavSite__level--1 .u-NavSite__item--isOpen > .u-NavSite__item,
-  .u-pageInner .u-NavSite__level--1 > li > .u-NavSite__item.u-NavSite__item--isCurrent {
+  .u-pageInner .u-NavSite__level--1 .u-NavSite__item--isOpen > .u-NavSite__item, .u-pageInner .u-NavSite__level--1 > li > .u-NavSite__item.u-NavSite__item--isCurrent {
     background: #F0EEEB;
     background: #861f41;
     color: #fff;
@@ -2508,7 +2609,6 @@ html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
 .u-pageInner .u-NavSite__level--2 {
   background: #F0EEEB;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   left: 0;
@@ -2568,7 +2668,6 @@ html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
       grid-template-rows: auto 1fr;
       grid-template-areas: "details title" "details description";
       padding: 1em 0; } }
-
 .event__details {
   grid-area: details;
   grid-row: span 2 / 3; }
@@ -2648,7 +2747,6 @@ html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
     .js .modulesArea--page-nav {
       position: -webkit-sticky;
       position: sticky; } }
-
 .js .modulesArea__row h2,
 .js .row-title {
   position: relative; }
@@ -2717,12 +2815,10 @@ What's tricky is that I don't see rows as modules. Ideally, special content trea
     padding-bottom: 3em; }
   .row--schedule-grid .Module--mainContent {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: wrap;
-        -ms-flex-flow: wrap;
-            flex-flow: wrap;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
     max-width: 74em;
     margin: 0 auto;
     padding: 0; }
@@ -2743,7 +2839,6 @@ What's tricky is that I don't see rows as modules. Ideally, special content trea
       .row--schedule-grid.cols-3 table:nth-child(3n-7) {
         width: 32%;
         margin-right: 1%; } }
-
 table {
   border-spacing: 0;
   width: 100%; }
@@ -2807,7 +2902,6 @@ tbody td, tbody th {
     .u-folderCongratulations .u-Masthead__siteName--link .year,
     .u-folderCongrats2023 .u-Masthead__siteName--link .year {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
       .u-folderCongratulations .u-Masthead__siteName--link .year b,
@@ -2823,8 +2917,7 @@ tbody td, tbody th {
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             background-blend-mode: screen;
-            -webkit-background-size: cover;
-                    background-size: cover; } }
+            background-size: cover; } }
         @supports (-webkit-background-clip: text) {
           .u-folderCongratulations .u-Masthead__siteName--link .year b:nth-child(1),
           .u-folderCongrats2023 .u-Masthead__siteName--link .year b:nth-child(1) {
@@ -2885,18 +2978,16 @@ tbody td, tbody th {
   @media screen and (min-width: 56.25em) {
     .u-folderAnswers .u-lContent {
       padding: 0; } }
-
-.u-folderAnswers .u-pageTitle, .u-folderAnswers .Module__desc h1, .Module__desc .u-folderAnswers h1, .u-folderAnswers
-.u-lContent h1,
+.u-folderAnswers .u-pageTitle, .u-folderAnswers .Module__desc h1, .Module__desc .u-folderAnswers h1,
+.u-folderAnswers .u-lContent h1,
 .u-lContent .u-folderAnswers h1 {
   margin-top: 1.2em; }
   @media screen and (min-width: 56.25em) {
-    .u-folderAnswers .u-pageTitle, .u-folderAnswers .Module__desc h1, .Module__desc .u-folderAnswers h1, .u-folderAnswers
-    .u-lContent h1,
+    .u-folderAnswers .u-pageTitle, .u-folderAnswers .Module__desc h1, .Module__desc .u-folderAnswers h1,
+    .u-folderAnswers .u-lContent h1,
     .u-lContent .u-folderAnswers h1 {
       margin-top: 0.8em; } }
-
-.row-title#types-of-loans {
+#types-of-loans.row-title {
   font-family: SourceSansVar, "acumin-pro", "Arial", "Helvetica";
   font-size: 1.5em;
   font-weight: bold;
@@ -2915,27 +3006,25 @@ tbody td, tbody th {
 .u-folderAdmissions.u-pageHome .u-NavSite__main {
   margin-bottom: 0; }
 
-.u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1, .u-pageInner
-.u-lContent h1,
+.u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1,
+.u-pageInner .u-lContent h1,
 .u-lContent .u-pageInner h1 {
   padding-left: 0.4em;
   padding-right: 0.4em; }
   @media screen and (min-width: 56.25em) {
-    .u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1, .u-pageInner
-    .u-lContent h1,
+    .u-pageInner .u-pageTitle, .u-pageInner .Module__desc h1, .Module__desc .u-pageInner h1,
+    .u-pageInner .u-lContent h1,
     .u-lContent .u-pageInner h1 {
       padding-left: 0; } }
-
-.secondLevelNavSplit .u-pageTitle, .secondLevelNavSplit .Module__desc h1, .Module__desc .secondLevelNavSplit h1, .secondLevelNavSplit
-.u-lContent h1,
+.secondLevelNavSplit .u-pageTitle, .secondLevelNavSplit .Module__desc h1, .Module__desc .secondLevelNavSplit h1,
+.secondLevelNavSplit .u-lContent h1,
 .u-lContent .secondLevelNavSplit h1 {
   margin: 0; }
   @media screen and (min-width: 56.25em) {
-    .secondLevelNavSplit .u-pageTitle, .secondLevelNavSplit .Module__desc h1, .Module__desc .secondLevelNavSplit h1, .secondLevelNavSplit
-    .u-lContent h1,
+    .secondLevelNavSplit .u-pageTitle, .secondLevelNavSplit .Module__desc h1, .Module__desc .secondLevelNavSplit h1,
+    .secondLevelNavSplit .u-lContent h1,
     .u-lContent .secondLevelNavSplit h1 {
       padding-left: 8%; } }
-
 .secondLevelNavSplit .u-lContent {
   max-width: none; }
 
@@ -2995,12 +3084,10 @@ tbody td, tbody th {
   @media screen and (min-width: 37.5em) {
     .secondLevelNavSplit .u-NavSite__level--2 {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; }
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
       .secondLevelNavSplit .u-NavSite__level--2 .u-NavSite__itemContainer {
         width: 40%; } }
   @media screen and (min-width: 56.25em) {
@@ -3009,7 +3096,6 @@ tbody td, tbody th {
       width: 20em; }
       .secondLevelNavSplit .u-NavSite__level--2 .u-NavSite__itemContainer {
         width: auto; } }
-
 .secondLevelNavSplit .u-NavSite__level--2 .u-NavSite__item {
   float: none;
   white-space: normal; }
@@ -3022,7 +3108,6 @@ tbody td, tbody th {
     @media screen and (min-width: 56.25em) {
       .secondLevelNavSplit .u-NavSite__level--2 li a {
         text-align: left; } }
-
 @media screen and (min-width: 56.25em) {
   .secondLevelNavSplit .modulesArea__row {
     padding-left: 8%; } }
@@ -3072,12 +3157,10 @@ tbody td, tbody th {
     @media screen and (min-width: 56.25em) {
       .u-pageHome .Module__fullWidthIntroAnnouncements .Module__list {
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         margin: 2% auto; }
         .u-pageHome .Module__fullWidthIntroAnnouncements .Module__list .Module__listItem:first-child {
           width: 56%; }
@@ -3091,11 +3174,9 @@ tbody td, tbody th {
     margin: 0 auto; }
     .u-pageHome .hp-social .Module__list {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
     .u-pageHome .hp-social .Module__listItem {
@@ -3115,11 +3196,9 @@ tbody td, tbody th {
     margin: 0 auto; }
     .u-pageHome .hp-social-photo-tiles .Module__list {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
     .u-pageHome .hp-social-photo-tiles .Module__listItem {
@@ -3157,7 +3236,6 @@ tbody td, tbody th {
   @media screen and (min-width: 56.25em) {
     .u-pageHome.u-folderAdmissions .reqinfo {
       margin-bottom: 0; } }
-
 .u-pageHome.u-folderAdmissions .button--reqinfo {
   margin-bottom: 0.4em; }
 
@@ -3166,7 +3244,6 @@ tbody td, tbody th {
   @media screen and (min-width: 56.25em) {
     .u-pageHome.u-folderAdmissions .modulesArea {
       text-align: left; } }
-
 .u-pageHome.u-folderAdmissions .row-title {
   font-size: 3em;
   letter-spacing: .03em; }
@@ -3174,12 +3251,10 @@ tbody td, tbody th {
 /*	four-grid */
 .feature-grid .Module__list {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0.2em; }
 
 .feature-grid .Module__listItem {
@@ -3187,7 +3262,6 @@ tbody td, tbody th {
   @media screen and (min-width: 56.25em) {
     .feature-grid .Module__listItem {
       width: 50%; } }
-
 .feature-grid .Module__link {
   background: #000;
   border: none;
@@ -3196,22 +3270,18 @@ tbody td, tbody th {
 
 .feature-grid .Module__desc {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
   .feature-grid .Module__desc h2 {
@@ -3232,7 +3302,6 @@ tbody td, tbody th {
     @media screen and (min-width: 37.5em) {
       .feature-grid .Module__desc p {
         padding: 0px 15%; } }
-
 .feature-grid .Module__image img {
   margin: 0;
   opacity: 0.6;
@@ -3321,7 +3390,6 @@ tbody td, tbody th {
   @media screen and (min-width: 56.25em) {
     .u-folderJamesmundy .intro-row .figure--image {
       width: 31%; } }
-
 .u-folderJamesmundy .u-Masthead__subhead {
   display: none !important; }
 
@@ -3329,8 +3397,7 @@ tbody td, tbody th {
   .u-folderJamesmundy .u-lHeader {
     padding: 53% 0 0 0 !important;
     background-image: url(/jamesmundy/assets/images/banner.jpg);
-    -webkit-background-size: contain;
-            background-size: contain;
+    background-size: contain;
     background-position: top center; }
   .u-folderJamesmundy .u-Masthead__siteName--link {
     display: block;
@@ -3350,15 +3417,12 @@ tbody td, tbody th {
   .u-folderJamesmundy .u-lHeader {
     height: calc(100vh - 8em);
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-align: end;
-    -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
     padding: 0 0 3em 0 !important;
@@ -3430,8 +3494,7 @@ tbody td, tbody th {
       background-image: url(/jamesmundy/assets/images/banner.jpg);
       width: 100%;
       height: 100%;
-      -webkit-background-size: cover;
-              background-size: cover;
+      background-size: cover;
       top: 0;
       background-attachment: fixed;
       -webkit-animation-name: fade-in;
@@ -3477,7 +3540,6 @@ tbody td, tbody th {
     @media screen and (min-width: 56.25em) {
       .modulesArea__row.flickity-row .item-content {
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; } }
   .modulesArea__row.flickity-row .flickity-page-dots {
@@ -3517,9 +3579,509 @@ tbody td, tbody th {
       width: 60%; }
     .modulesArea__row.flickity-row .img-vertical .Module__desc {
       width: 40%; } }
-
 .u-folderExploring-tensegrity .u-lHeader {
   background-image: url(/exploring-tensegrity/assets/images/InFreeRideHome2-copy.jpg); }
 
 .u-folderExploring-tensegrity .u-NavSite__main {
   display: none; }
+
+/* ********	In Admissions *********** */
+.u-NavSite__level--3 {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-top: 0.4em; }
+
+.u-NavSite__item.icon-external svg {
+  height: 0.7em;
+  width: 0.7em; }
+
+.u-Masthead__siteName--link {
+  padding: 0.15em 0.3em 0.3em 0.3em !important; }
+
+.feature-grid .Module__desc h2 {
+  text-align: center; }
+
+/* Video List */
+ul.videoList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+  row-gap: 1em;
+  list-style: none;
+  padding-left: 0; }
+
+ul.videoList a {
+  border: solid .1em !important;
+  display: grid;
+  grid-template: "videoThumbnail" "videoHeader" "videoCaption";
+  line-height: 1.2;
+  padding: 1em 5% !important;
+  text-decoration: none !important; }
+
+ul.videoList a:hover {
+  background-color: #fff8f0;
+  border-color: #bf8840;
+  color: #635036;
+  -webkit-transform: scale(1.0125);
+      -ms-transform: scale(1.0125);
+          transform: scale(1.0125);
+  -webkit-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-box-shadow: 0 0 0.5em 0.25em #b3b3b3;
+          box-shadow: 0 0 0.5em 0.25em #b3b3b3; }
+
+/* use figcaption in case strong is used in title */
+ul.videoList figcaption strong {
+  color: #333;
+  font-size: 1.05em; }
+
+/* use figcaption in case em is used in title */
+ul.videoList figcaption em {
+  color: #333;
+  font-size: .9em;
+  line-height: 0 !important; }
+
+ul.videoList figure {
+  margin-bottom: 1em; }
+
+ul.videoList h3 {
+  font-size: 1.15em;
+  font-weight: normal;
+  grid-area: videoHeader;
+  line-height: 1.2;
+  margin-bottom: .5em; }
+
+ul.videoList img {
+  grid-area: videoThumbnail;
+  width: 100%; }
+
+ul.videoList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* Video List */
+/* Modal */
+.modal {
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1050; }
+
+.modal iframe {
+  border: 0; }
+
+.modal-backdrop {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1040; }
+
+.modal-backdrop.fade, .modal-backdrop.fade-light, .modal-backdrop.fade-dark, .modal-backdrop.theme-dark, .modal-backdrop.theme-light {
+  opacity: 0; }
+
+.modal-backdrop.show {
+  opacity: .94; }
+
+.modal-body {
+  position: relative; }
+
+.modal-content {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #1A1A1A;
+  border-radius: .5em;
+  /* offset header height to vertically center modal */
+  margin-top: -3.5em;
+  padding: 0 1em 1em;
+  position: relative; }
+
+.modal-dialog {
+  margin: 0 auto;
+  width: 90%; }
+
+.modal.fade, .modal.fade-light, .modal.fade-dark, .modal.theme-dark, .modal.theme-light {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear; }
+
+/* override Admission styling */
+.modal.fade:after, .modal.fade-light:after, .modal.fade-dark:after, .modal.theme-dark:after, .modal.theme-light:after,
+.modal-backdrop.fade:after,
+.modal-backdrop.fade-light:after,
+.modal-backdrop.fade-dark:after,
+.modal-backdrop.theme-dark:after,
+.modal-backdrop.theme-light:after {
+  display: none;
+  visibility: hidden; }
+
+/* override Admission styling */
+.modal.fade.show, .modal.show.fade-light, .modal.show.fade-dark, .modal.show.theme-dark, .modal.show.theme-light {
+  opacity: 1; }
+
+.modal.fade .modal-dialog, .modal.fade-light .modal-dialog, .modal.fade-dark .modal-dialog, .modal.theme-dark .modal-dialog, .modal.theme-light .modal-dialog {
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  -webkit-transition: -webkit-transform .4s ease-out;
+  transition: -webkit-transform .4s ease-out;
+  -o-transition: transform .4s ease-out;
+  transition: transform .4s ease-out;
+  transition: transform .4s ease-out, -webkit-transform .4s ease-out; }
+
+.modal-header {
+  padding: 1em 0;
+  text-align: right; }
+
+.modal-header .close {
+  background-color: #111;
+  border: solid .125em #aaa;
+  color: #efefef;
+  cursor: pointer; }
+
+.modal-header .close:hover {
+  background-color: #fefefe;
+  color: #333; }
+
+.modal-open {
+  overflow: hidden; }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+/* override JS display: block */
+.modal.show {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+/* override JS display: block */
+.modal.show .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+@media (min-width: 60em) {
+  .modal-dialog {
+    margin: 1em auto;
+    width: 60%; } }
+
+/* Modal */
+.parent-site .Module--news li.Module__listItem a {
+  border-bottom: solid 1px !important; }
+
+.parent-site .Module__desc h3 {
+  margin-bottom: .5em;
+  text-transform: none; }
+
+.parent-site .Module__desc h2 {
+  font-family: "acumin-pro-extra-condensed","Arial Narrow","Helvetica Condensed";
+  font-weight: 300; }
+
+.parent-site .feature-grid .Module__desc {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.parent-site .u-pageTitle, .parent-site .Module__desc h1, .Module__desc .parent-site h1,
+.parent-site .u-lContent h1,
+.u-lContent .parent-site h1 {
+  margin-bottom: .25em !important;
+  text-transform: none; }
+
+.parent-site h3 {
+  text-transform: none; }
+
+.parent-site h2 {
+  font-weight: 300;
+  font-family: "acumin-pro-extra-condensed","Arial Narrow","Helvetica Condensed"; }
+
+.parent-site .row-title {
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.parent-site .Module--mainContent.Module--halfWidth h3 {
+  font-size: 1.5em; }
+
+.parent-site .row--contact-listing h3:not(:first-child) {
+  margin-top: 1em !important; }
+
+@media screen and (min-width: 900px) {
+  .u-NavSite__level--2 .u-NavSite__item[href="/admissions/docs/Vassar-Viewbook-2020.pdf"] {
+    background: rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    padding: 0.4em;
+    margin-top: 0.4em;
+    margin-left: 0.5em; }
+  .u-NavSite__level--2 .u-NavSite__item[href="/admissions/docs/Vassar-Viewbook-2020.pdf"]:hover,
+  .u-NavSite__level--2 .u-NavSite__item[href="/admissions/docs/Vassar-Viewbook-2020.pdf"]:focus,
+  .u-NavSite__level--2 .u-NavSite__item[href="/admissions/docs/Vassar-Viewbook-2020.pdf"]:active {
+    -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+            transform: scale(1.06);
+    -webkit-box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2); }
+  .u-NavSite__level--2 .u-NavSite__item[href="/admissions/docs/Vassar-Viewbook-2020.pdf"]:after {
+    content: '';
+    background: url(/admissions/docs/viewbook2020-cover.jpg) no-repeat center center;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    margin-top: 3%;
+    height: 230px;
+    width: 100%; } }
+
+.mod--deadlines .index-list li em:before {
+  content: none !important; }
+
+.imagegrid .Module__desc {
+  padding: 0.6em !important; }
+
+.u-folderViewbook .u-lHeader {
+  background-image: url(/admissions/assets/images/banners/0191-19-10-ali-library-drone-vassar-vb-2003.jpg); }
+
+/*	******* In New Students ******** */
+/*	This will go away as soon as we can have site-level styling vs centralized styling */
+.u-lHeader {
+  /*	Congrats	
+	-------- */
+  /*	New Students	
+	------------ */
+  /*	Admissions	
+	---------- */
+  /*	
+	@include local-header('.u-folderOpen-house', '0123_15_11_KR_0031.jpg');	
+	@include local-header('.u-folderOpen-house', '0139_16_11_KR_0114.jpg');	
+	@include local-header('.u-folderOpen-house', '0141_14_11_KR_0234.jpg');	
+	@include local-header('.u-folderOpen-house', '0152_13_10_-KF_0321.jpg');	
+	@include local-header('.u-folderOpen-house', '0152_13_10_-KF_0490.jpg');	
+	@include local-header('.u-folderOpen-house', '0162_14_11_TT_2356.jpg');	
+	@include local-header('.u-folderOpen-house', '0177_16_09_KR_0086.jpg');	
+	@include local-header('.u-folderOpen-house', '0203_17_04_KR_0155.jpg');	
+	@include local-header('.u-folderOpen-house', 'ALANA-Fest-1709-KR-1599.jpg');	
+	*/ }
+
+.u-folderOpen-house .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0203_17_04_KR_0155.jpg"); }
+
+.u-folderVisit-schedule .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0098_15_09_KR_0019.jpg"); }
+
+.u-folderAdmitted-student-stats .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/Raymond-House-1704-KR-0052.jpg"); }
+
+.u-folderFaqs .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/Move-In-Day-1808-KR_1767.jpg"); }
+
+.u-folderReceptions .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0139_16_11_KR_0114.jpg"); }
+
+.u-pageHome.u-folderNewstudents .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0110_15_10_TT_6291_edit.jpg"); }
+
+.u-folderInternational-students .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0111_14_11_KR_0067.jpg"); }
+
+.u-folderFirst-year-students .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0137_14_11_KR_0123.jpg"); }
+
+.u-folderOrientation .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0177_16_09_KR_0086.jpg"); }
+
+.u-folderTransfer .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0098_15_09_KR_0068_edit.jpg"); }
+
+.u-folderForms-tests .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/0007_16_02_KR_0054.jpg"); }
+
+.u-folderAnswers .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/adm-site-banner.jpg"); }
+
+.u-folderFinancial-aid .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/masthead-7_Campus.jpg"); }
+
+.u-folderClass-profile .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/masthead-15_Student-Life.jpg"); }
+
+.u-folderVisit-us .u-lHeader {
+  background-image: url("https://vassar.edu/assets/images/banners/masthead-6_Campus.jpg"); }
+
+.u-folderOpenhouse .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0110_15_10_TT_6291_edit.jpg"); }
+
+.u-folderCampus .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0019_12_04_TT_0796.jpg"); }
+
+.u-folderClassvisits .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0098_15_09_KR_0019.jpg"); }
+
+.u-folderOvernight .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0032_15_04_JA_655.jpg"); }
+
+.u-folderGroup-tours .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0152_13_10_-KF_0321.jpg"); }
+
+.u-folderTour .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0162_14_11_TT_2356.jpg"); }
+
+.u-folderForms .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0074_16_07_KR_0048.jpg"); }
+
+.u-folderStudent-faqs .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0075_16_07_KR_0075.jpg"); }
+
+.u-folderCampus .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0092_16_08_BL_5883.jpg"); }
+
+.u-folderRequirements .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0046_16_04_KR_0007.jpg"); }
+
+.u-folderDiversity .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0074_15_08_KR_0088.jpg"); }
+
+.u-folderOvernight .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0093_14_10_KR_0103.jpg"); }
+
+.u-folderAward .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0177_16_09_KR_0066.jpg"); }
+
+.u-folderGrants-and-scholarships .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0162_14_11_TT_2262.jpg"); }
+
+.u-folderLoans-and-lenders .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/308_Bridge_Vassar_May-2019_JA.jpg"); }
+
+.u-folderCampus-employment .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0014_13_02_JA_380.jpg"); }
+
+.u-folderTuition .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/Vassar_Campus_20190508_KR_4959.jpg"); }
+
+.u-folderForms .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/Vassar_Dorm_20190506_KR_4372.jpg"); }
+
+.u-folderContact .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/Vassar_Campus_20190508_KR_5086.jpg"); }
+
+.u-folderInterviews .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0006-19-01-kr-0681-sophomore-career-conn-vassar.jpg"); }
+
+.u-folderCampus .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0152_13_10_-KF_0399.jpg"); }
+
+.u-folderArts .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/HW_26A1208.jpg"); }
+
+.u-folderVeterans .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0003_16_01_SS2_133.jpg"); }
+
+.u-folderAfter-vassar .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0114_18_09_KR_3643.jpg"); }
+
+.u-folderRegional .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0001_15_01_SS2_052.jpg"); }
+
+.u-folderFive-colleges .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/0019_12_04_TT_0814.jpg"); }
+
+.u-folderApply .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/Vassar_Campus_20190508_KR_5240.jpg"); }
+
+.u-folderFinancial-aid .u-lHeader {
+  background-image: url("/admissions/assets/images/banners/Vassar_Campus_20190508_KR_5302.jpg"); }
+
+@-webkit-keyframes fade-shift-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes fade-shift-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+/*	New styling added by Jeff */
+.u-Masthead__siteName--link {
+  padding: 0.15em 0.3em 0.3em 0.3em; }
+
+.parent-site .u-pageTitle, .parent-site .Module__desc h1, .Module__desc .parent-site h1,
+.parent-site .u-lContent h1,
+.u-lContent .parent-site h1 {
+  text-transform: none; }
+
+.parent-site .row-title {
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.parent-site .Module__desc h3 {
+  text-transform: none; }
+
+.parent-site h3 {
+  font-size: 1.5em !important;
+  margin-bottom: .5em;
+  text-transform: none; }
+
+.parent-site .Module__fullWidthPageNav .Module__title {
+  font-size: .88em !important;
+  font-family: "SourceSansVar" !important;
+  font-variation-settings: "wght" 500 !important; }
+
+.parent-site .faq__indexHeader,
+.parent-site .faq__sectionHeader {
+  text-transform: none !important; }
+
+/*
+	These are overrides added by Jeff
+*/
+.Module--halfWidth {
+  margin: 0 !important;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+@media (min-width: 56.25em) {
+  .modulesArea__row--twocols {
+    padding-left: calc((100vw - 48em) / 2);
+    padding-right: calc((100vw - 48em) / 2); } }
+
+.aside--note {
+  background: #f8f7f6; }
+
+.Module__fullWidthPageNav .Module__title:after {
+  border-right: unset; }
+
+.u-pageHome .hp-social .Module__link:hover {
+  z-index: 99; }
+
+.u-pageHome .hp-social-photo-tiles .Module__link:hover {
+  z-index: 99; }
